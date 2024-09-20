@@ -40,16 +40,16 @@
     }
     .terminal-body {
       overflow-y: auto;
-      max-height: 210px; /* adjust the max-height to your desired value */
+      max-height: 210px; 
     }
 
     body {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Prevent scroll bars */
+      overflow: hidden;
       width: 100%;
       height: 100%;
-      background-size: cover; /* Ensure background image covers the entire body */
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -57,21 +57,19 @@
   }
   
   #background {
-      position: fixed; /* Keep the canvas fixed during scrolling */
+      position: fixed; 
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1; /* Place the canvas behind other content */
+      z-index: -1;
   }
   </style>
 </head>
 
-<!-- <body class="m-0 p-0 overflow-hidden h-screen w-screen bg-black text-white font-sans relative"></body> -->
 
 <body class="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-  <!-- Header Section -->
-  <canvas id="background"></canvas>
+  <!-- <canvas id="background"></canvas> -->
   <header class="bg-gradient-to-br from-black to-gray-600 shadow-md py-3 sticky top-0 z-50">
     <div class="container mx-auto px-6 flex justify-between items-center">
       <div>
@@ -86,7 +84,7 @@
       </nav>
     </div>
   </header>
-  <section id="introduction" class="hero  bg-cover bg-center bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
+  <section id="introduction" class="hero   p-6 glassmorphism-card">
     <div class="container mx-auto px-6 py-12 flex justify-center items-center">
 
       <section class="container mx-auto px-6 py-12"
@@ -128,334 +126,327 @@
     
   </div>
 
-
-  <!-- Education and Skills Section -->
-  <section id="education" class="container mx-auto px-6 py-12  shadow-md rounded-md relative">
-    <!-- Title for Education -->
-    <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
-
-    <!-- Education Timeline Container -->
-    <div class="relative">
-      <!-- Timeline Bar -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
-
-      <!-- Education Item 1 -->
-      <div class="flex flex-col md:flex-row items-center mb-8 relative">
-        <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        </div>
-        <div class="w-full md:w-1/2 px-4 md:text-right">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
-            <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
-            <p class="text-white">RIT, Berhampur (BPUT)</p>
-            <!-- <p class="text-white">2020 – 2024</p> -->
-            <p class="text-white">CGPA: 8.4</p>
+  
+    <!-- Education and Skills Section -->
+    <section id="education" class="container mx-auto px-6 py-12  shadow-md rounded-md relative">
+      <!-- Title for Education -->
+      <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
+  
+      <!-- Education Timeline Container -->
+      <div class="relative">
+        <!-- Timeline Bar -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
+  
+        <!-- Education Item 1 -->
+        <div class="flex flex-col md:flex-row items-center mb-8 relative">
+          <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           </div>
+          <div class="w-full md:w-1/2 px-4 md:text-right">
+            <div class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
+              <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
+              <p class="text-white">RIT, Berhampur (BPUT)</p>
+              <p class="text-white">CGPA: 8.4</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2020-2024</div>
         </div>
-        <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2020-2024</div>
+  
+        <!-- Education Item 2 -->
+        <div class="flex flex-col md:flex-row items-center mb-8 relative">
+          <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          </div>
+          <div class="w-full md:w-1/2 px-4 md:text-right order-2 md:order-1 hidden "></div>
+          <div class="w-full md:w-1/2 px-4">
+            <div class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
+              <h3 class="text-lg font-medium text-white">Intermediate</h3>
+              <p class="text-white">Khallikote Junior Science College, Berhampur</p>
+              <p class="text-white">Marks: 61%</p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2018-2020</div>
+        </div>
+  
+  
       </div>
-
-      <!-- Education Item 2 -->
-      <div class="flex flex-col md:flex-row items-center mb-8 relative">
-        <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        </div>
-        <div class="w-full md:w-1/2 px-4 md:text-right order-2 md:order-1 hidden "></div>
-        <div class="w-full md:w-1/2 px-4">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
-            <h3 class="text-lg font-medium text-white">Intermediate</h3>
-            <p class="text-white">Khallikote Junior Science College, Berhampur</p>
-            <!-- <p class="text-white">2018 – 2020</p> -->
-            <p class="text-white">Marks: 61%</p>
+  
+      <!-- Skills Section -->
+      <h2 class="text-2xl font-semibold text-white mb-4 mt-12">Professional Skills</h2>
+      <p class="text-white">As a highly motivated and organized software developer, I possess a unique blend of skills
+        that
+        enable me to excel in dynamic environments. I am a collaborative team player with excellent communication skills,
+        adept at adapting to new technologies and workflows. With a keen eye for detail, I prioritize tasks effectively,
+        manage my time efficiently, and deliver high-quality results. Additionally, my strong problem-solving abilities
+        allow me to navigate complex challenges and devise innovative solutions, making me a valuable asset to any
+        organization.</p>
+  
+      <section id="skills" class="p-8 rounded-md shadow-md  px-6 py-12 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+        <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
+  
+        <!-- Web Development Skills -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">HTML5</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="html" class="bg-red-600 h-4 rounded-full" style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">CSS3</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">JavaScript</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Bootstrap</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Tailwind CSS</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
           </div>
         </div>
-        <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2018-2020</div>
-      </div>
-
-      <!-- Add more education items here -->
-
-    </div>
-
-    <!-- Skills Section -->
-    <h2 class="text-2xl font-semibold text-white mb-4 mt-12">Professional Skills</h2>
-    <p class="text-white">As a highly motivated and organized software developer, I possess a unique blend of skills
-      that
-      enable me to excel in dynamic environments. I am a collaborative team player with excellent communication skills,
-      adept at adapting to new technologies and workflows. With a keen eye for detail, I prioritize tasks effectively,
-      manage my time efficiently, and deliver high-quality results. Additionally, my strong problem-solving abilities
-      allow me to navigate complex challenges and devise innovative solutions, making me a valuable asset to any
-      organization.</p>
-
-    <section id="skills" class="p-8 rounded-md shadow-md  px-6 py-12 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-      <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
-
-      <!-- Web Development Skills -->
-      <div class="space-y-4">
-        <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">HTML5</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="html" class="bg-red-600 h-4 rounded-full" style="width: 90%;"></div>
+  
+        <!-- SQL/Database Skills -->
+        <div class="space-y-4 mt-6">
+          <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">MySQL</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Oracle</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
+            </div>
           </div>
         </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">CSS3</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+  
+        <!-- Python Skills -->
+        <div class="space-y-4 mt-6">
+          <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
+          <!-- Python Modules -->
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Python</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+          <!-- Pandas -->
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Pandas</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+          <!-- TensorFlow -->
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">TensorFlow</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
+          </div>
+          <!-- NumPy -->
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">NumPy</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+          <!-- Python Concepts -->
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">OOPs, Data Structures</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
           </div>
         </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">JavaScript</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
+  
+        <!-- Tools and Other Skills -->
+        <div class="space-y-4 mt-6">
+          <h3 class="text-2xl font-semibold text-white mb-4">Tools and Other Skills</h3>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Git</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="git" class="bg-red-500 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="w-8 h-8 mr-2">
+            <label class="text-white font-medium w-1/4">Django</label>
+            <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+              <div id="django" class="bg-green-400 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
           </div>
         </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Bootstrap</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
+      </section>
+  
+  
+  
+    </section>
+    <section id="projects" class="container mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold text-white mb-4">Projects</h2>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1: Rain Prediction -->
+        <div
+          class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
+            <p class="mb-2">
+              Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity and occurrence.
+              Utilized historical climate data, including temperature, humidity, wind speed, and atmospheric pressure, for
+              training and prediction of rainfall patterns.
+            </p>
+            <p><strong>Technologies:</strong> Python, TensorFlow</p>
           </div>
         </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Tailwind CSS</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
+  
+        <!-- Project Card 2: Power BI Project -->
+        <div
+          class="bg-red-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-2">Power BI Project</h3>
+            <iframe title="Baikuthaassignmeet35" width="100%" height="auto"
+              src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
+              frameborder="0" allowfullscreen="true" class="bg-black"></iframe>
+            <p class="mt-2 mb-2">
+              Created a data visualization project using Power BI to analyze and present data trends effectively.
+              Developed
+              dashboards and reports for business decision-making.
+            </p>
+            <p><strong>Technologies:</strong> Power BI</p>
+          </div>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
+              class="text-blue-400 hover:underline">Open project</a>
           </div>
         </div>
-      </div>
-
-      <!-- SQL/Database Skills -->
-      <div class="space-y-4 mt-6">
-        <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">MySQL</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+  
+        <div
+          class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
+          <!-- Image Section -->
+          <a href="https://github.com/Baikun1/stichfit"><img class="w-full h-48 object-cover"
+              src="https://i.ibb.co/r6GYFq7/Screenshot-2024-09-13-143121.png" alt="Screenshot-2024-09-13-143121"
+              border="0" /></a>
+          <!-- <img src="https://ibb.co/swvnbcm" alt="Tailor Ecommerce Website" class="w-full h-48 object-cover"> -->
+  
+          <!-- Content Section -->
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-2">Tailor Ecommerce Website</h3>
+            <p class="mb-2">
+              Developed a comprehensive tailor ecommerce website using Django. Includes features like custom tailoring,
+              alterations, fabric selection, design consultation, and secure payment processing.
+            </p>
+            <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
+          </div>
+  
+          <!-- Footer Section -->
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+            <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">View on GitHub</a>
           </div>
         </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Oracle</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
+  
+  
+        <!-- Project Card 4: Bank Management System -->
+        <div
+          class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
+            <p class="mb-2">
+              Created a bank management system using Django to handle various banking operations such as account
+              management,
+              transaction processing, and user authentication.
+            </p>
+            <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
+          </div>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+            <a href="https://github.com/Baikun1/Bank_project_using_Django" class="text-blue-400 hover:underline">View on
+              GitHub</a>
           </div>
         </div>
-      </div>
-
-      <!-- Python Skills -->
-      <div class="space-y-4 mt-6">
-        <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
-        <!-- Python Modules -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Python</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
+  
+        <!-- Project Card 5: QR Code Generator -->
+        <div
+          class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-2">QR Code Generator</h3>
+            <p class="mb-2">
+              Developed a web application for generating QR codes. Allows users to input data and generate a corresponding
+              QR code image for various uses.
+            </p>
+            <p><strong>Technologies:</strong> python</p>
+          </div>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+            <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline">View on GitHub</a>
           </div>
         </div>
-        <!-- Pandas -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Pandas</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
+  
+  
+        <!-- Project Card 5: password Generator -->
+        <div
+          class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-2">password Generator</h3>
+            <p class="mb-2">
+              Developed a web application for generating password. Allows users to input data and generate a corresponding
+              password.
+            </p>
+            <p><strong>Technologies:</strong> python</p>
           </div>
-        </div>
-        <!-- TensorFlow -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">TensorFlow</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
-          </div>
-        </div>
-        <!-- NumPy -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">NumPy</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-          </div>
-        </div>
-        <!-- Python Concepts -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">OOPs, Data Structures</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools and Other Skills -->
-      <div class="space-y-4 mt-6">
-        <h3 class="text-2xl font-semibold text-white mb-4">Tools and Other Skills</h3>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Git</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="git" class="bg-red-500 h-4 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Django</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="django" class="bg-green-400 h-4 rounded-full" style="width: 75%;"></div>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 hover:underline">View on GitHub</a>
           </div>
         </div>
       </div>
     </section>
-
-
-
-  </section>
-  <section id="projects" class="container mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold text-white mb-4">Projects</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Project Card 1: Rain Prediction -->
-      <div
-        class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
-          <p class="mb-2">
-            Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity and occurrence.
-            Utilized historical climate data, including temperature, humidity, wind speed, and atmospheric pressure, for
-            training and prediction of rainfall patterns.
-          </p>
-          <p><strong>Technologies:</strong> Python, TensorFlow</p>
+  
+  
+  
+  
+    <section id="blogs" class="container mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold text-white mb-4">Blog Posts</h2>
+  
+    </section>
+  
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-6 mt-12">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <div>
+          <p>&copy; 2024 Baikuntha Behera</p>
+        </div>
+        <div>
+          <a href="https://github.com/Baikun1" class="text-blue-400 hover:underline">GitHub</a> |
+          <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400 hover:underline">LinkedIn</a>
         </div>
       </div>
-
-      <!-- Project Card 2: Power BI Project -->
-      <div
-        class="bg-red-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">Power BI Project</h3>
-          <iframe title="Baikuthaassignmeet35" width="100%" height="auto"
-            src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
-            frameborder="0" allowfullscreen="true" class="bg-black"></iframe>
-          <p class="mt-2 mb-2">
-            Created a data visualization project using Power BI to analyze and present data trends effectively.
-            Developed
-            dashboards and reports for business decision-making.
-          </p>
-          <p><strong>Technologies:</strong> Power BI</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
-            class="text-blue-400 hover:underline">Open project</a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
-        <!-- Image Section -->
-        <a href="https://github.com/Baikun1/stichfit"><img class="w-full h-48 object-cover"
-            src="https://i.ibb.co/r6GYFq7/Screenshot-2024-09-13-143121.png" alt="Screenshot-2024-09-13-143121"
-            border="0" /></a>
-        <!-- <img src="https://ibb.co/swvnbcm" alt="Tailor Ecommerce Website" class="w-full h-48 object-cover"> -->
-
-        <!-- Content Section -->
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">Tailor Ecommerce Website</h3>
-          <p class="mb-2">
-            Developed a comprehensive tailor ecommerce website using Django. Includes features like custom tailoring,
-            alterations, fabric selection, design consultation, and secure payment processing.
-          </p>
-          <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
-        </div>
-
-        <!-- Footer Section -->
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">View on GitHub</a>
-        </div>
-      </div>
-
-
-      <!-- Project Card 4: Bank Management System -->
-      <div
-        class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
-          <p class="mb-2">
-            Created a bank management system using Django to handle various banking operations such as account
-            management,
-            transaction processing, and user authentication.
-          </p>
-          <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/Bank_project_using_Django" class="text-blue-400 hover:underline">View on
-            GitHub</a>
-        </div>
-      </div>
-
-      <!-- Project Card 5: QR Code Generator -->
-      <div
-        class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">QR Code Generator</h3>
-          <p class="mb-2">
-            Developed a web application for generating QR codes. Allows users to input data and generate a corresponding
-            QR code image for various uses.
-          </p>
-          <p><strong>Technologies:</strong> python</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline">View on GitHub</a>
-        </div>
-      </div>
-
-
-      <!-- Project Card 5: password Generator -->
-      <div
-        class="bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card text-white rounded-lg overflow-hidden shadow-lg w-auto h-auto">
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">password Generator</h3>
-          <p class="mb-2">
-            Developed a web application for generating password. Allows users to input data and generate a corresponding
-            password.
-          </p>
-          <p><strong>Technologies:</strong> python</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 hover:underline">View on GitHub</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section id="blogs" class="container mx-auto px-6 py-12">
-    <h2 class="text-2xl font-semibold text-white mb-4">Blog Posts</h2>
-
-  </section>
-
-  <!-- Footer Section -->
-  <footer class="bg-gray-900 text-white py-6 mt-12">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <div>
-        <p>&copy; 2024 Baikuntha Behera</p>
-      </div>
-      <div>
-        <a href="https://github.com/Baikun1" class="text-blue-400 hover:underline">GitHub</a> |
-        <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400 hover:underline">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Make terminal draggable
-
-  </script>
+    </footer>
+  
 
   <script src="./index.js"></script>
 </body>
