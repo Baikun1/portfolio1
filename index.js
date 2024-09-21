@@ -190,4 +190,3 @@ window.addEventListener('scroll', () => {
         terminalContainer.classList.add('hidden');
     }
 });
-
