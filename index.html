@@ -83,6 +83,25 @@
     iframe {
       overflow: auto;
     }
+
+    .project-card {
+      border-top: 1px solid var(--border);
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      background-color: var(--bg-color-primary);
+      transform: translateY(calc(-1 * var(--radius)));
+    }
+
+    /* Blinking indicator */
+    .blink {
+      animation: blink-animation 1s steps(5, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
   </style>
 </head>
 
@@ -97,9 +116,10 @@
       </div>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#introduction" class="text-white hover:text-blue-600">Introduction</a></li>
-          <li><a href="#projects" class="text-white hover:text-blue-600">Projects</a></li>
+          <li><a href="#projects" class="text-white hover:text-blue-600">My Works</a></li>
           <li><a href="#blogs" class="text-white hover:text-blue-600">Blog</a></li>
+          <li><a href="#contact" class="text-white hover:text-blue-600">contacts</a></li>
+          <li><a href="#introduction" class="text-white hover:text-blue-600">Introduction</a></li>
         </ul>
       </nav>
     </div>
@@ -121,6 +141,14 @@
           software development, web design, and project management. Skilled in multiple programming languages and
           frameworks, I am eager to contribute to organizational growth in a dynamic environment.
         </p>
+        <div class="header-btns mt-3">
+          <a href="#contact"
+            class="bg-gray-900 hover:bg-red-900 shadow-md rounded-full py-2 px-4 text-white font-bold transition duration-300 ease-in-out">Hire
+            me</a>
+          <a href="#project"
+            class="bg-gray-900 hover:bg-green-900 shadow-md rounded-full py-2 px-4 text-white font-bold transition duration-300 ease-in-out">See
+            my work</a>
+        </div>
       </section>
     </div>
   </section>
@@ -150,7 +178,7 @@
 
 
   <!-- Education and Skills Section -->
-  <section id="education" class="container mx-auto px-6 py-12  shadow-md rounded-md relative">
+  <section id="education" class="container mx-auto px-6 py-12  rounded-md relative">
     <!-- Title for Education -->
     <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
 
@@ -191,346 +219,346 @@
 
     </div>
 
-    <!-- Skills Section -->
-    <h2 class="text-2xl font-semibold text-white mb-4 mt-12">Professional Skills</h2>
-    <p class="text-white">As a highly motivated and organized software developer, I possess a unique blend of skills
-      that
-      enable me to excel in dynamic environments. I am a collaborative team player with excellent communication skills,
-      adept at adapting to new technologies and workflows. With a keen eye for detail, I prioritize tasks effectively,
-      manage my time efficiently, and deliver high-quality results. Additionally, my strong problem-solving abilities
-      allow me to navigate complex challenges and devise innovative solutions, making me a valuable asset to any
-      organization.</p>
 
-    <section id="skills" class="p-8 rounded-md  px-6 py-12 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-      <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
 
-      <!-- Web Development Skills -->
-      <div class="space-y-4">
-        <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">HTML5</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="html" class="bg-red-600 h-4 rounded-full" style="width: 90%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">CSS3</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">JavaScript</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Bootstrap</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS"
-            class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Tailwind CSS</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SQL/Database Skills -->
-      <div class="space-y-4 mt-6">
-        <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">MySQL</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Oracle</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Python Skills -->
-      <div class="space-y-4 mt-6">
-        <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
-        <!-- Python Modules -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Python</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
-          </div>
-        </div>
-        <!-- Pandas -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Pandas</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-        <!-- TensorFlow -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">TensorFlow</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
-          </div>
-        </div>
-        <!-- NumPy -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">NumPy</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-          </div>
-        </div>
-        <!-- Python Concepts -->
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">OOPs, Data Structures</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tools and Other Skills -->
-      <div class="space-y-4 mt-6">
-        <h3 class="text-2xl font-semibold text-white mb-4">Tools and Other Skills</h3>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Git</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="git" class="bg-red-500 h-4 rounded-full" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="w-8 h-8 mr-2">
-          <label class="text-white font-medium w-1/4">Django</label>
-          <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-            <div id="django" class="bg-green-400 h-4 rounded-full" style="width: 75%;"></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
 
   </section>
-  <section id="projects" class="container mx-auto px-6 py-12">
-    <h2 class="text-3xl font-semibold text-white mb-8 text-center">Projects</h2>
+  <!-- skill  -->
+  <section id="skills" class="p-8 rounded-md  px-6 py-12 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+    <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-      <!-- Project Card: Rain Prediction -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
-          <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity and
-            occurrence using historical climate data.</p>
-          <p><strong>Technologies:</strong> Python, TensorFlow</p>
+    <!-- Web Development Skills -->
+    <div class="space-y-4">
+      <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">HTML5</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="html" class="bg-red-600 h-4 rounded-full" style="width: 90%;"></div>
         </div>
       </div>
-
-      <!-- Project Card: Power BI Project -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-red-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">Power BI Project</h3>
-          <iframe title="Power BI Project" width="100%" height="auto"
-            src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
-            frameborder="0" allowfullscreen class="bg-black"></iframe>
-          <p class="mt-2 mb-2">Created a data visualization project using Power BI to analyze and present data trends
-            effectively.</p>
-          <p><strong>Technologies:</strong> Power BI</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
-            class="text-blue-400 hover:underline">Open project</a>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">CSS3</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
         </div>
       </div>
-
-      <!-- Project Card: Tailor Ecommerce Website -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <a href="https://github.com/Baikun1/stichfit">
-          <img class="w-full h-48 object-cover rounded-md"
-            src="https://i.ibb.co/r6GYFq7/Screenshot-2024-09-13-143121.png" alt="Tailor Ecommerce Website" />
-        </a>
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">Tailor Ecommerce Website</h3>
-          <p class="mb-2">Developed a comprehensive tailor ecommerce website using Django with features like custom
-            tailoring and secure payment processing.</p>
-          <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">View on GitHub</a>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">JavaScript</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
         </div>
       </div>
-
-
-      <!-- Project Card 4: Bank Management System -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
-          <p class="mb-2">
-            Created a bank management system using Django to handle various banking operations such as account
-            management,
-            transaction processing, and user authentication.
-          </p>
-          <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/Bank_project_using_Django" class="text-blue-400 hover:underline">View on
-            GitHub</a>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Bootstrap</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
         </div>
       </div>
-
-      <!-- Project Card 5: QR Code Generator -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">QR Code Generator</h3>
-          <p class="mb-2">
-            Developed a web application for generating QR codes. Allows users to input data and generate a corresponding
-            QR code image for various uses.
-          </p>
-          <p><strong>Technologies:</strong> python</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline">View on GitHub</a>
-        </div>
-      </div>
-
-
-      <!-- Project Card 5: password Generator -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-
-        <div class="p-4">
-          <h3 class="text-lg font-medium mb-2">password Generator</h3>
-          <p class="mb-2">
-            Developed a web application for generating password. Allows users to input data and generate a corresponding
-            password.
-          </p>
-          <p><strong>Technologies:</strong> python</p>
-        </div>
-        <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-          <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 hover:underline">View on GitHub</a>
-        </div>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-      <!-- Project Card for Typing Test -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <div class="overflow-hidden relative"
-          style="width: 100%; height: 400px; transform: scale(0.9); transform-origin: top left;">
-          <iframe src="https://baikun1.github.io/typing-test/" class="w-full h-full border-0"
-            title="Typing Test"></iframe>
-        </div>
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">Typing Test</h3>
-          <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
-          <div class="flex justify-between">
-            <a href="https://baikun1.github.io/typing-test/" target="_blank"
-              class="text-blue-400 hover:underline flex items-center">
-              <span>Open in New Tab</span>
-               
-            </a>
-            <a href="https://github.com/Baikun1/typing-test" target="_blank"
-              class="text-blue-400 hover:underline">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Project Card for Weather App -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <iframe src="https://baikun1.github.io/weather-app/" class="w-full h-full border-0"
-          title="Weather App"></iframe>
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">Weather App</h3>
-          <p class="mb-2">Get real-time weather updates for any city using this simple weather application.</p>
-          <div class="flex justify-between">
-            <a href="https://baikun1.github.io/weather-app/" target="_blank"
-              class="text-blue-400 hover:underline flex items-center">
-              <span>Open in New Tab</span>
-               
-            </a>
-            <a href="https://github.com/Baikun1/weather-app" target="_blank"
-              class="text-blue-400 hover:underline">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Card for To-Do List -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <div class="overflow-hidden relative"
-          style="width: 100%; height: 400px; transform: scale(0.9); transform-origin: top left;">
-          <iframe src="https://baikun1.github.io/to-do-list/" class="w-full h-full border-0"
-            title="To-Do List"></iframe>
-        </div>
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">To-Do List</h3>
-          <p class="mb-2">Manage your tasks efficiently with this interactive to-do list application.</p>
-          <div class="flex justify-between">
-            <a href="https://baikun1.github.io/to-do-list/" target="_blank"
-              class="text-blue-400 hover:underline flex items-center">
-              <span>Open in New Tab</span>
-               
-            </a>
-            <a href="https://github.com/Baikun1/to-do-list" target="_blank" class="text-blue-400 hover:underline">Source
-              Code</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Card for Digital Watch -->
-      <div
-        class="project-card transition-transform duration-300 hover:scale-105 bg-green-900 bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 text-white flex flex-col">
-        <iframe src="https://baikun1.github.io/digitalwatch/" class="w-full h-full border-0"
-          title="Digital Watch"></iframe>
-        <div class="p-4 flex-grow">
-          <h3 class="text-lg font-medium mb-2">Digital Watch</h3>
-          <p class="mb-2">A simple digital watch interface that displays the current time in an elegant format.</p>
-          <div class="flex justify-between">
-            <a href="https://baikun1.github.io/digitalwatch/" target="_blank"
-              class="text-blue-400 hover:underline flex items-center">
-              <span>Open in New Tab</span>
-               
-            </a>
-            <a href="https://github.com/Baikun1/digitalwatch" target="_blank"
-              class="text-blue-400 hover:underline">Source Code</a>
-          </div>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS"
+          class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Tailwind CSS</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
         </div>
       </div>
     </div>
 
+    <!-- SQL/Database Skills -->
+    <div class="space-y-4 mt-6">
+      <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">MySQL</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Oracle</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Python Skills -->
+    <div class="space-y-4 mt-6">
+      <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
+      <!-- Python Modules -->
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Python</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
+        </div>
+      </div>
+      <!-- Pandas -->
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Pandas</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
+        </div>
+      </div>
+      <!-- TensorFlow -->
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">TensorFlow</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
+        </div>
+      </div>
+      <!-- NumPy -->
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">NumPy</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+      <!-- Python Concepts -->
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">OOPs, Data Structures</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools and Other Skills -->
+    <div class="space-y-4 mt-6">
+      <h3 class="text-2xl font-semibold text-white mb-4">My tool kits</h3>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Git</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="git" class="bg-red-500 h-4 rounded-full" style="width: 80%;"></div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="w-8 h-8 mr-2">
+        <label class="text-white font-medium w-1/4">Django</label>
+        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
+          <div id="django" class="bg-green-400 h-4 rounded-full" style="width: 75%;"></div>
+        </div>
+      </div>
+    </div>
   </section>
+  <!-- projects -->
 
 
+
+  <section id="projects" class="">
+    <h2 class="text-3xl font-semibold text-white mb-8 text-center">My Works</h2>
+    <div class="">
+      <table class="w-full text-white">
+        <tbody>
+
+
+          <!-- Project Card: Power BI Project -->
+          <tr class=" p-6">
+            <td class="p-4">
+              <h3 class="text-2xl font-medium mb-2">Power BI Project</h3>
+              <p class="mt-2 mb-2">Created a data visualization project using Power BI to analyze and present data
+                trends effectively.</p>
+              <p><strong>Technologies:</strong> Power BI</p>
+            </td>
+            <td class="p-4 text-right">
+              <iframe title="Power BI Project" width="600" height="400"
+                src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
+                frameborder="0" allowfullscreen></iframe>
+            </td>
+          </tr>
+
+          <!-- Project Card: Tailor Ecommerce Website -->
+          <tr class=" shadow-md rounded-md p-6">
+            <td class="p-4 text-right">
+              <a href="https://github.com/Baikun1/stichfit">
+                <img class="w-300 h-200 object-cover rounded-md"
+                  src="https://i.ibb.co/r6GYFq7/Screenshot-2024-09-13-143121.png" alt="Tailor Ecommerce Website" />
+              </a>
+
+            </td>
+
+            <td class="p-4">
+              <h3 class="text-lg font-medium mb-2">Tailor Ecommerce Website</h3>
+              <p class="mb-2">Developed a comprehensive tailor ecommerce website using Django with features like custom
+                tailoring and secure payment processing.</p>
+              <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
+              <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+                <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">View on GitHub</a>
+              </div>
+            </td>
+
+
+
+
+          </tr>
+
+
+
+          <!-- Project Card: Typing Test -->
+          <tr class=" shadow-md rounded-md p-6">
+            <td class="p-4">
+
+              <h3 class="text-lg font-medium mb-2">Typing Test</h3>
+              <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
+              <div class="flex">
+                
+                <a href="https://baikun1.github.io/typing-test/" target="_blank" class="flex items-center">
+                  <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                      <i class="fas fa-external-link-alt mr-2"></i>
+                      Open  in New Tab
+                  </button>
+              </a>
+                <a href="https://github.com/Baikun1/typing-test" target="_blank" class="flex items-center">
+                  <button
+                    class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                    <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                    Source Code
+                  </button>
+                </a>
+              </div>
+            </td>
+            <td class="p-4 text-right">
+              <div class="overflow-hidden relative"
+                style="width: 100%; height: 400px; transform: scale(0.9); transform-origin: top left;">
+                <iframe src="https://baikun1.github.io/typing-test/" class="w-full h-full border-0"
+                  title="Typing Test"></iframe>
+              </div>
+
+            </td>
+          </tr>
+
+          <!-- Project Card: Weather App -->
+          <tr class=" shadow-md rounded-md p-6">
+            <td class="p-4 text-right">
+              <iframe src="https://baikun1.github.io/weather-app/" class="w-full h-full border-0 "
+                title="Weather App"></iframe>
+            </td>
+            <td class="p-4">
+              <h3 class="text-lg font-medium mb-2">Weather App</h3>
+              <p class="mb-2">Get real-time weather updates for any city using this simple weather application.</p>
+              <div class="flex justify-between">
+                <a href="https://baikun1.github.io/weather-app/" target="_blank"
+                  class="text-blue-400 hover:underline flex items-center">
+                  <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                      <i class="fas fa-external-link-alt mr-2"></i>
+                      Open in New Tab
+                  </button>
+                </a>
+                <a href="https://github.com/Baikun1/weather-app" target="_blank"
+                  class="text-blue-400 hover:underline">Source
+                  Code</a>
+              </div>
+            </td>
+
+          </tr>
+
+          <!-- Project Card: To-Do List -->
+          <tr class=" rounded-md p-6">
+            <td class="p-4">
+
+              <h3 class="text-lg font-medium mb-2">To-Do List</h3>
+              <p class="mb-2">Manage your tasks efficiently with this interactive to-do list application.</p>
+              <div class="flex justify-between">
+                <a href="https://baikun1.github.io/to-do-list/" target="_blank"
+                  class="text-blue-400 hover:underline flex items-center">
+                  <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                      <i class="fas fa-external-link-alt mr-2"></i>
+                      Open in New Tab
+                  </button>
+                </a>
+                <a href="https://github.com/Baikun1/to-do-list" target="_blank"
+                  class="text-blue-400 hover:underline">Source
+                  Code</a>
+              </div>
+            </td>
+            <td class="p-4 text-right">
+              <div class="overflow-hidden relative"
+                style="width: 100%; height: 400px; transform: scale(0.9); transform-origin: top left;">
+                <iframe src="https://baikun1.github.io/to-do-list/" class="w-full h-full border-0"
+                  title="To-Do List"></iframe>
+              </div>
+            </td>
+          </tr>
+          <!-- Project Card: Rain Prediction -->
+          <tr class="bg-white bg-opacity-20 shadow-md rounded-md p-6">
+            <td class="p-4">
+              <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
+              <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity
+                and occurrence using historical climate data.</p>
+              <p><strong>Technologies:</strong> Python, TensorFlow</p>
+            </td>
+            <td class="p-4 text-right"></td>
+          </tr>
+          <!-- Project Card: Bank Management System -->
+          <tr class="bg-green-900 bg-opacity-20 shadow-md rounded-md p-6">
+            <td class="p-4">
+              <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
+              <p class="mb-2">Created a bank management system using Django to handle various banking operations such as
+                account management, transaction processing, and user authentication.</p>
+              <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
+              <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+                <a href="https://github.com/Baikun1/Bank_project_using_Django"
+                  class="text-blue-400 hover:underline"> <button
+                    class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                    <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                    Source Code
+                  </button></a>
+              </div>
+            </td>
+            <td class="p-4 text-right"></td>
+          </tr>
+
+          <!-- Project Card: QR Code Generator -->
+          <tr class="bg-green-900 bg-opacity-20 shadow-md rounded-md p-6">
+            <td class="p-4">
+              <h3 class="text-lg font-medium mb-2">QR Code Generator</h3>
+              <p class="mb-2">Developed a web application for generating QR codes. Allows users to input data and
+                generate a corresponding QR code image for various uses.</p>
+              <p><strong>Technologies:</strong> Python</p>
+              <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+                <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline"> <button
+                    class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                    <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                    Source Code
+                  </button></a>
+              </div>
+            </td>
+            <td class="p-4 text-right"></td>
+          </tr>
+
+          <!-- Project Card: Password Generator -->
+          <tr class="bg-green-900 bg-opacity-20 shadow-md rounded-md p-6">
+            <td class="p-4">
+              <h3 class="text-lg font-medium mb-2">Password Generator</h3>
+              <p class="mb-2">Developed a web application for generating passwords. Allows users to input data and
+                generate a corresponding password.</p>
+              <p><strong>Technologies:</strong> Python</p>
+              <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+                <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 hover:underline"> <button
+                    class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                    <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                    Source Code
+                  </button></a>
+              </div>
+            </td>
+            <td class="p-4 text-right"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
 
   <section id="blogs" class="container mx-auto px-6 py-12">
@@ -551,6 +579,54 @@
 
   </section>
 
+
+
+  <!-- contacct -->
+  <section class="contact bg-gray-900 text-white py-12 container mx-auto px-6 max-w-3xl">
+    <!-- Set max width for larger screens -->
+    <h2 class="text-3xl font-bold mb-8 text-center" id="contact">Send Message</h2>
+    <div class="contact-content flex flex-col md:flex-row">
+      <div class="contact-textbox md:w-1/2 mb-6 md:mr-6 fade-in">
+        <strong href="#"
+          class="rounded-full inline-block  border border-gray-300 p-2 hire-alert flex items-center mb-4">
+          <span class="indicator w-2.5 h-2.5 rounded-full bg-red-500 blink mr-2"></span> <!-- Blinking indicator -->
+          Available for hire
+        </strong>
+        <p class="contact-text mb-4">As a software engineer, I construct web interfaces and design systems with a
+          special love for accessibility and performance. I tend to code things from scratch and enjoy bringing ideas
+          to life.</p>
+        <p class="contact-text mb-4">I'm also an open-source developer, and in my spare time, I do digital art with my
+          iPad Pro.</p>
+        <img src="https://example.com/assets/images/signatures.png" alt="Your Name" class="signatures mt-4 w-48 fade-in"
+          loading="lazy" />
+      </div>
+      <form action="#" class="contact-form md:w-1/2 bg-gray-800 p-6 rounded-lg shadow-md fade-in" netlify>
+        <div class="form-field mb-4">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        </div>
+        <div class="form-field mb-4">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required inputmode="email"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        </div>
+        <div class="form-field mb-4">
+          <label for="message">How can I help you?</label>
+          <textarea name="message" id="message" required
+            class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+        </div>
+        <button type="submit"
+          class="btn btn-cta w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-md transition duration-300">Send</button>
+      </form>
+    </div>
+
+  </section>
+
+
+
+
+
   <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-6 mt-12">
     <div class="container mx-auto px-6 flex justify-between items-center">
@@ -566,6 +642,7 @@
 
 
   <script src="./index.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

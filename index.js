@@ -14,7 +14,7 @@ TxtType.prototype.tick = function () {
 
     if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
+    } else { 
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
