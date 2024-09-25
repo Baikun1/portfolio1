@@ -68,83 +68,93 @@ fetch('./terminal.json')
   .then(response => response.json())
   .then(data => {
     commands = {
-      'intro': data.introduction.join('\n'),
+      'intro': data.introduction,
       'about': data.about,
-      'edu': data.education.join('\n'),
-      'skills': data.technicalSkills.join('\n'),
-      'projects': data.projects.join('\n'),
-      'blog': data.blog.join('\n'),
-      'help': "Available commands: intro, about, edu, skills, projects, blog, help, clear, exit",
-      'clear': "Clearing the screen...",
-      'exit': "Exiting the command prompt..."
+      'edu': data.education,
+      'skills': data.technicalSkills,
+      'projects': data.projects,
+      'blog': data.blog,
+      'help': ["Available commands: intro, about, edu, skills, projects, blog, help, clear, exit"],
+      'clear': ["Clearing the screen..."],
+      'exit': ["Exiting the command prompt..."]
     };
   })
   .catch(error => console.error('Error fetching JSON data:', error));
-console.log(commands.intro)
+
 const subCommands = {
-    'email': "Email: bbaikuntha87@gmail.com",
-    'github': "GitHub: (link unavailable)",
-    'linkedin': "LinkedIn: (link unavailable)"
+  'email': ["Email: bbaikuntha87@gmail.com"],
+  'github': ["GitHub: (link unavailable)"],
+  'linkedin': ["LinkedIn: (link unavailable)"]
 };
 
 // Handle key events for terminal input
 function handleKey(event) {
-    if (event.key === 'Enter') {
-        const inputText = terminalInput.value.trim().toLowerCase();
+  if (event.key === 'Enter') {
+    const inputText = terminalInput.value.trim().toLowerCase();
+    appendToTerminal(`guest@terminal:~$ ${inputText}`);
+    terminalInput.value = '';
 
-        appendToTerminal(`guest@terminal:~$ ${inputText}`);
-        terminalInput.value = '';
-
-        if (commands[inputText]) {
-            showLoadingEffect(() => {
-                if (inputText === 'contact') {
-                    appendToTerminal(commands[inputText]);
-                } else if (inputText === 'clear') {
-                    clearTerminal();
-                } else if (inputText === 'exit') {
-                    appendToTerminal(commands[inputText]);
-                    setTimeout(() => {
-                        terminalContainer.classList.add('hidden');
-                    }, 2000);
-                } else {
-                    appendToTerminal(commands[inputText]);
-                }
-            });
-        } else if (subCommands[inputText]) {
-            showLoadingEffect(() => {
-                appendToTerminal(subCommands[inputText]);
-            });
+    if (commands[inputText]) {
+      showLoadingEffect(() => {
+        if (inputText === 'clear') {
+          clearTerminal();
+        } else if (inputText === 'exit') {
+          appendToTerminal(commands[inputText][0]);
+          setTimeout(() => {
+            terminalContainer.classList.add('hidden');
+          }, 2000);
         } else {
-            appendToTerminal('Command not found or error.');
+          appendWithDelay(commands[inputText], 1000);
         }
+      });
+    } else if (subCommands[inputText]) {
+      showLoadingEffect(() => {
+        appendWithDelay(subCommands[inputText], 1000);
+      });
+    } else {
+      appendToTerminal('Command not found or error.');
     }
+  }
 }
 
 // Show the "loading..." effect with dynamic dots
 function showLoadingEffect(callback) {
-    let dots = '';
-    const intervalId = setInterval(() => {
-        dots = dots.length < 3 ? dots + '.' : '';
-        terminalOutput.lastChild.textContent = `Loading${dots}`;
-    }, 500);
+  let dots = '';
+  const intervalId = setInterval(() => {
+    dots = dots.length < 3 ? dots + '.' : '';
+    terminalOutput.lastChild.textContent = `Loading${dots}`;
+  }, 500);
 
-    setTimeout(() => {
-        clearInterval(intervalId);
-        callback();
-    }, 2000);
+  setTimeout(() => {
+    clearInterval(intervalId);
+    callback();
+  }, 1500);
+}
+
+// Append text to the terminal one by one with delay
+function appendWithDelay(dataArray, delay) {
+  let i = 0;
+  function displayNext() {
+    if (i < dataArray.length) {
+      appendToTerminal(dataArray[i]);
+      i++;
+      setTimeout(displayNext, delay);
+    }
+  }
+  displayNext();
 }
 
 // Append text to the terminal
 function appendToTerminal(text) {
-    const commandOutput = document.createElement('div');
-    commandOutput.textContent = text;
-    terminalOutput.appendChild(commandOutput);
-    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  const commandOutput = document.createElement('div');
+  commandOutput.innerHTML = text;
+  terminalOutput.appendChild(commandOutput);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
 }
 
 // Clear the terminal screen
 function clearTerminal() {
-    terminalOutput.innerHTML = '<div>guest@terminal:~$ Type "help" to see all commands</div>';
+  terminalOutput.innerHTML = '<div>guest@terminal:~$ Type "help" to see all commands</div>';
 }
 
 // Make the terminal draggable
@@ -152,33 +162,33 @@ let isDragging = false;
 let offsetX, offsetY;
 
 terminalHeader.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - terminalContainer.getBoundingClientRect().left;
-    offsetY = e.clientY - terminalContainer.getBoundingClientRect().top;
-    terminalContainer.style.transition = 'none'; // Disable transition for smooth dragging
+  isDragging = true;
+  offsetX = e.clientX - terminalContainer.getBoundingClientRect().left;
+  offsetY = e.clientY - terminalContainer.getBoundingClientRect().top;
+  terminalContainer.style.transition = 'none'; // Disable transition for smooth dragging
 });
 
 document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-        const newX = e.clientX - offsetX;
-        const newY = e.clientY - offsetY;
-        terminalContainer.style.left = `${newX}px`;
-        terminalContainer.style.top = `${newY}px`;
-    }
+  if (isDragging) {
+    const newX = e.clientX - offsetX;
+    const newY = e.clientY - offsetY;
+    terminalContainer.style.left = `${newX}px`;
+    terminalContainer.style.top = `${newY}px`;
+  }
 });
 
 document.addEventListener('mouseup', () => {
-    isDragging = false;
-    terminalContainer.style.transition = ''; // Re-enable transition if needed
+  isDragging = false;
+  terminalContainer.style.transition = ''; // Re-enable transition if needed
 });
 
 // Cursor blinking effect for terminal input
 terminalInput.addEventListener('focus', () => {
-    terminalInput.classList.add('blinking-cursor');
+  terminalInput.classList.add('blinking-cursor');
 });
 
 terminalInput.addEventListener('blur', () => {
-    terminalInput.classList.remove('blinking-cursor');
+  terminalInput.classList.remove('blinking-cursor');
 });
 
 // Initialize terminal input functionality
@@ -186,7 +196,7 @@ terminalInput.addEventListener('keydown', handleKey);
 
 // Hide terminal on scroll
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-        terminalContainer.classList.add('hidden');
-    }
+  if (window.scrollY > 0) {
+    terminalContainer.classList.add('hidden');
+  }
 });

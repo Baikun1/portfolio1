@@ -1,0 +1,94 @@
+/* Custom Tailwind Classes for Animations */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter p {
+  animation: typewriter 4s steps(40, end) 1s 1 normal both,
+    blink 500ms steps(40, end) infinite;
+}
+
+.blinking-cursor::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 1em;
+  background-color: #0f0;
+  margin-left: 2px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.terminal-body {
+  overflow-y: auto;
+  max-height: 210px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: auto;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.project-card {
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+  /* Makes the card stretch to fit content */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+iframe {
+  overflow: auto;
+}
+
+.project-card {
+  border-top: 1px solid var(--border);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background-color: var(--bg-color-primary);
+  transform: translateY(calc(-1 * var(--radius)));
+}
+
+/* Blinking indicator */
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

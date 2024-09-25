@@ -5,112 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baikuntha Behera - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <script src="https://kit.fontawesome.com/7226ead90d.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Custom Tailwind Classes for Animations */
-    @keyframes typewriter {
-      from {
-        width: 0;
-      }
-
-      to {
-        width: 100%;
-      }
-    }
-
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
-    }
-
-    .typewriter p {
-      animation: typewriter 4s steps(40, end) 1s 1 normal both,
-        blink 500ms steps(40, end) infinite;
-    }
-
-    .blinking-cursor::after {
-      content: '';
-      display: inline-block;
-      width: 10px;
-      height: 1em;
-      background-color: #0f0;
-      margin-left: 2px;
-      animation: blink 1s steps(2, start) infinite;
-    }
-
-    .terminal-body {
-      overflow-y: auto;
-      max-height: 210px;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      overflow: auto;
-    }
-
-    #background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .project-card {
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
-      height: 100%;
-      /* Makes the card stretch to fit content */
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    iframe {
-      overflow: auto;
-    }
-
-    .project-card {
-      border-top: 1px solid var(--border);
-      border-top-left-radius: var(--radius);
-      border-top-right-radius: var(--radius);
-      background-color: var(--bg-color-primary);
-      transform: translateY(calc(-1 * var(--radius)));
-    }
-
-    /* Blinking indicator */
-    .blink {
-      animation: blink-animation 1s steps(5, start) infinite;
-    }
-
-    @keyframes blink-animation {
-      to {
-        visibility: hidden;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 
 <body class=" min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
   style="background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
   <!-- <canvas id="background"></canvas> -->
-  <header class="bg-gradient-to-br from-black to-gray-600 shadow-md py-3 sticky top-0 z-50">
+  <header class="bg-gradient-to-br from-black to-gray-600  py-3 sticky top-0 z-50">
     <div class="container mx-auto px-6 flex justify-between items-center">
+
       <div>
         <h1 class="text-3xl font-bold text-white">Baikuntha Behera</h1>
       </div>
@@ -124,34 +32,52 @@
       </nav>
     </div>
   </header>
-  <section id="introduction" class="hero   p-6 glassmorphism-card">
-    <div class="container mx-auto px-6 py-12 flex justify-center items-center">
 
-      <section class="container mx-auto px-6 py-12"
-        style="background-image: url('../../pyspider/Pyspider_class/webtech/imgs/gian-paolo-aliatis--AfflhhVVuA-unsplash.jpg'); background-size: cover; background-blend-mode: multiply; filter: blur(0px); ">
-        <!-- <h2 class="text-2xl font-semibold text-white-900 mb-4">Introduction</h2> -->
-        <h1 class="mb-6">
-          <!-- Animated typing effect element -->
+  <!-- interduction -->
+  <section id="container" class="p-20 sm:p-16 md:p-20 lg:p-24 xl:p-20 w-auto flex flex-col md:flex-row px-4 sm:px-8 md:px-24 lg:px-24 xl:px-24 relative"
+  style="background-image: url('../../pyspider/Pyspider_class/webtech/imgs/gian-paolo-aliatis--AfflhhVVuA-unsplash.jpg'); background-size: cover; background-blend-mode: multiply; filter: blur(0px);">
+
+  <div class="mr-10">
+      <img
+          class="rounded-lg min-w-[100px] w-full h-auto md:w-auto md:h-auto"
+          src="./media/profil.jpg"
+          alt="Profile Picture of Baikuntha Behera"
+      />
+  </div>
+
+  <div class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
+      <h1 class="text-white font-bold text-3xl mt-6 mb-8">
+          Hey, it's me, Baikuntha Behera
+      </h1>
+
+      <h1 class="mb-6">
           <span class="typewrite text-xl font-medium text-yellow-600" data-period="2000"
-            data-type='["Hi, I am Baikuntha","I am a software developer","Enthusiast for developing applications","I code in Python","Dedicated to crafting efficient software solutions","Proficient in Django and web development","SQL specialist with a focus on data insights","Skilled in HTML, CSS, and JavaScript","Full-stack developer with a passion for quality","Eager to explore new technologies and frameworks","Detail-oriented and meticulous in my approach","Collaborative team player with excellent communication skills","Adaptable and responsive to changing project requirements","Continuous learner, staying updated with industry trends","Problem-solver with a creative approach","Focused on delivering high-quality solutions on time","Passionate about leveraging technology for social impact","Proficient in Agile methodologies for efficient project management","Strong understanding of software design patterns and principles","Excited to bring innovative ideas to life through code"]'>
+              data-type='["Hi, I am Baikuntha","I am a software developer","Enthusiast for developing applications","I code in Python","Dedicated to crafting efficient software solutions","Proficient in Django and web development","SQL specialist with a focus on data insights","Skilled in HTML, CSS, and JavaScript","Full-stack developer with a passion for quality","Eager to explore new technologies and frameworks","Detail-oriented and meticulous in my approach","Collaborative team player with excellent communication skills","Adaptable and responsive to changing project requirements","Continuous learner, staying updated with industry trends","Problem-solver with a creative approach","Focused on delivering high-quality solutions on time","Passionate about leveraging technology for social impact","Proficient in Agile methodologies for efficient project management","Strong understanding of software design patterns and principles","Excited to bring innovative ideas to life through code"]'>
           </span>
-        </h1>
-        <p class="text-lg text-white">
+      </h1>
+
+      <p class="text-lg text-white">
           I am Baikuntha Behera, an aspiring software developer with a B.Tech in Computer Science. I am passionate about
           software development, web design, and project management. Skilled in multiple programming languages and
           frameworks, I am eager to contribute to organizational growth in a dynamic environment.
-        </p>
-        <div class="header-btns mt-3">
-          <a href="#contact"
-            class="bg-gray-900 hover:bg-red-900 shadow-md rounded-full py-2 px-4 text-white font-bold transition duration-300 ease-in-out">Hire
-            me</a>
-          <a href="#project"
-            class="bg-gray-900 hover:bg-green-900 shadow-md rounded-full py-2 px-4 text-white font-bold transition duration-300 ease-in-out">See
-            my work</a>
-        </div>
-      </section>
-    </div>
-  </section>
+      </p>
+
+      <div class="mt-3">
+          <a href="#contact" class="text-blue-400 hover:underline">
+              <button class="bg-blue-600 text-white font-semibold py-2 px-4 mt-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                  <i class="fa-thin fa-id-card fa-beat-fade" style="color: #ffffff;"></i> Hire Me
+              </button>
+          </a>
+          <a href="#projects" class="text-green-400 hover:underline">
+              <button class="bg-green-600 text-white font-semibold py-2 px-4 mt-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                  <i class="fa-sharp-duotone fa-solid fa-laptop fa-fade" style="color: #ffffff;"></i> See My Works
+              </button>
+          </a>
+      </div>
+  </div>
+</section>
+
+
 
 
   <!-- terminal -->
@@ -178,7 +104,7 @@
 
 
   <!-- Education and Skills Section -->
-  <section id="education" class="container mx-auto px-6 py-12  rounded-md relative">
+  <section id="education" class="container mx-auto px-6 py-12  rounded-md relative bg-blend-lighten">
     <!-- Title for Education -->
     <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
 
@@ -192,7 +118,7 @@
         <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         </div>
         <div class="w-full md:w-1/2 px-4 md:text-right">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
+          <div class="bg-white bg-opacity-20 backdrop-blur-lg  rounded-md p-6 glassmorphism-card">
             <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
             <p class="text-white">RIT, Berhampur (BPUT)</p>
             <p class="text-white">CGPA: 8.4</p>
@@ -207,7 +133,7 @@
         </div>
         <div class="w-full md:w-1/2 px-4 md:text-right order-2 md:order-1 hidden "></div>
         <div class="w-full md:w-1/2 px-4">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg shadow-md rounded-md p-6 glassmorphism-card">
+          <div class="bg-white bg-opacity-20 backdrop-blur-lg  rounded-md p-6 glassmorphism-card">
             <h3 class="text-lg font-medium text-white">Intermediate</h3>
             <p class="text-white">Khallikote Junior Science College, Berhampur</p>
             <p class="text-white">Marks: 61%</p>
@@ -358,7 +284,7 @@
 
 
   <section id="projects" class="">
-    <h2 class="text-3xl font-semibold text-white mb-8 text-center">My Works</h2>
+    <h2 class="text-3xl font-semibold text-white mb-8 text-center">Some of my recent or pined Works</h2>
     <div class="">
       <table class="w-full text-white">
         <tbody>
@@ -380,7 +306,7 @@
           </tr>
 
           <!-- Project Card: Tailor Ecommerce Website -->
-          <tr class=" shadow-md rounded-md p-6">
+          <tr class="  rounded-md p-6">
             <td class="p-4 text-right">
               <a href="https://github.com/Baikun1/stichfit">
                 <img class="w-300 h-200 object-cover rounded-md"
@@ -395,39 +321,42 @@
                 tailoring and secure payment processing.</p>
               <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
               <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-                <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">View on GitHub</a>
-              </div>
-            </td>
-
-
-
-
-          </tr>
-
-
-
-          <!-- Project Card: Typing Test -->
-          <tr class=" shadow-md rounded-md p-6">
-            <td class="p-4">
-
-              <h3 class="text-lg font-medium mb-2">Typing Test</h3>
-              <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
-              <div class="flex">
-                
-                <a href="https://baikun1.github.io/typing-test/" target="_blank" class="flex items-center">
-                  <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
-                      <i class="fas fa-external-link-alt mr-2"></i>
-                      Open  in New Tab
-                  </button>
-              </a>
-                <a href="https://github.com/Baikun1/typing-test" target="_blank" class="flex items-center">
+                <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">
                   <button
-                    class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                    class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                     <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
                     Source Code
                   </button>
                 </a>
               </div>
+            </td>
+          </tr>
+
+
+
+          <!-- Project Card: Typing Test -->
+          <tr class="  rounded-md p-6">
+            <td class="p-4">
+
+              <h3 class="text-lg font-medium mb-2">Typing Test</h3>
+              <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
+
+
+              <a href="https://baikun1.github.io/typing-test/" target="_blank" class="flex items-center">
+                <button
+                  class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>
+                  Open in New Tab
+                </button>
+              </a>
+              <a href="https://github.com/Baikun1/typing-test" target="_blank" class="flex items-center">
+                <button
+                  class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                  <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                  Source Code
+                </button>
+              </a>
+
             </td>
             <td class="p-4 text-right">
               <div class="overflow-hidden relative"
@@ -440,7 +369,7 @@
           </tr>
 
           <!-- Project Card: Weather App -->
-          <tr class=" shadow-md rounded-md p-6">
+          <tr class="  rounded-md p-6">
             <td class="p-4 text-right">
               <iframe src="https://baikun1.github.io/weather-app/" class="w-full h-full border-0 "
                 title="Weather App"></iframe>
@@ -448,18 +377,22 @@
             <td class="p-4">
               <h3 class="text-lg font-medium mb-2">Weather App</h3>
               <p class="mb-2">Get real-time weather updates for any city using this simple weather application.</p>
-              <div class="flex justify-between">
-                <a href="https://baikun1.github.io/weather-app/" target="_blank"
-                  class="text-blue-400 hover:underline flex items-center">
-                  <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
-                      <i class="fas fa-external-link-alt mr-2"></i>
-                      Open in New Tab
-                  </button>
-                </a>
-                <a href="https://github.com/Baikun1/weather-app" target="_blank"
-                  class="text-blue-400 hover:underline">Source
-                  Code</a>
-              </div>
+
+              <a href="https://baikun1.github.io/weather-app/" target="_blank"
+                class="text-blue-400 hover:underline flex items-center">
+                <button
+                  class="bg-green-600 text-white font-semibold py-2 px-4 w-50 mx-4 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>
+                  Open in New Tab
+                </button>
+              </a>
+              <a href="https://github.com/Baikun1/weather-app" target="_blank"
+                class="text-blue-400 hover:underline"><button
+                  class="bg-blue-600 text-white font-semibold py-2 px-4 w-50 mx-4 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                  <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                  Source Code
+                </button></a>
+
             </td>
 
           </tr>
@@ -470,18 +403,22 @@
 
               <h3 class="text-lg font-medium mb-2">To-Do List</h3>
               <p class="mb-2">Manage your tasks efficiently with this interactive to-do list application.</p>
-              <div class="flex justify-between">
-                <a href="https://baikun1.github.io/to-do-list/" target="_blank"
-                  class="text-blue-400 hover:underline flex items-center">
-                  <button class="bg-green-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
-                      <i class="fas fa-external-link-alt mr-2"></i>
-                      Open in New Tab
-                  </button>
-                </a>
-                <a href="https://github.com/Baikun1/to-do-list" target="_blank"
-                  class="text-blue-400 hover:underline">Source
-                  Code</a>
-              </div>
+
+              <a href="https://baikun1.github.io/to-do-list/" target="_blank"
+                class="text-blue-400 hover:underline flex items-center">
+                <button
+                  class="bg-green-600 text-white font-semibold py-2 px-4 w-50 mx-4 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i>
+                  Open in New Tab
+                </button>
+              </a>
+              <a href="https://github.com/Baikun1/to-do-list" target="_blank"
+                class="text-blue-400 hover:underline"><button
+                  class="bg-blue-600 text-white font-semibold py-2 px-4 w-50 mx-4 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                  <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                  Source Code
+                </button></a>
+
             </td>
             <td class="p-4 text-right">
               <div class="overflow-hidden relative"
@@ -492,7 +429,7 @@
             </td>
           </tr>
           <!-- Project Card: Rain Prediction -->
-          <tr class="bg-white bg-opacity-20 shadow-md rounded-md p-6">
+          <tr class="bg-white bg-opacity-20  rounded-md p-6">
             <td class="p-4">
               <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
               <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity
@@ -502,15 +439,15 @@
             <td class="p-4 text-right"></td>
           </tr>
           <!-- Project Card: Bank Management System -->
-          <tr class="bg-green-900 bg-opacity-20 shadow-md rounded-md p-6">
+          <tr class="bg-green-900 bg-opacity-20  rounded-md p-6">
             <td class="p-4">
               <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
               <p class="mb-2">Created a bank management system using Django to handle various banking operations such as
                 account management, transaction processing, and user authentication.</p>
               <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
               <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-                <a href="https://github.com/Baikun1/Bank_project_using_Django"
-                  class="text-blue-400 hover:underline"> <button
+                <a href="https://github.com/Baikun1/Bank_project_using_Django" class="text-blue-400 hover:underline">
+                  <button
                     class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                     <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
                     Source Code
@@ -521,25 +458,27 @@
           </tr>
 
           <!-- Project Card: QR Code Generator -->
-          <tr class="bg-green-900 bg-opacity-20 shadow-md rounded-md p-6">
+          <tr class="bg-green-900 bg-opacity-20  rounded-md p-6">
             <td class="p-4">
               <h3 class="text-lg font-medium mb-2">QR Code Generator</h3>
               <p class="mb-2">Developed a web application for generating QR codes. Allows users to input data and
                 generate a corresponding QR code image for various uses.</p>
               <p><strong>Technologies:</strong> Python</p>
               <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-                <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline"> <button
+                <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline">
+                  <button
                     class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                     <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
                     Source Code
-                  </button></a>
+                  </button>
+                </a>
               </div>
             </td>
             <td class="p-4 text-right"></td>
           </tr>
 
           <!-- Project Card: Password Generator -->
-          <tr class="bg-green-900 bg-opacity-20 shadow-md rounded-md p-6">
+          <tr class="bg-green-900 bg-opacity-20  rounded-md p-6">
             <td class="p-4">
               <h3 class="text-lg font-medium mb-2">Password Generator</h3>
               <p class="mb-2">Developed a web application for generating passwords. Allows users to input data and
@@ -592,15 +531,13 @@
           <span class="indicator w-2.5 h-2.5 rounded-full bg-red-500 blink mr-2"></span> <!-- Blinking indicator -->
           Available for hire
         </strong>
-        <p class="contact-text mb-4">As a software engineer, I construct web interfaces and design systems with a
-          special love for accessibility and performance. I tend to code things from scratch and enjoy bringing ideas
-          to life.</p>
-        <p class="contact-text mb-4">I'm also an open-source developer, and in my spare time, I do digital art with my
-          iPad Pro.</p>
-        <img src="https://example.com/assets/images/signatures.png" alt="Your Name" class="signatures mt-4 w-48 fade-in"
+        <p class="contact-text mb-4">
+          As a Python Full Stack Developer, I create dynamic web interfaces and design systems focused on accessibility, performance, and scalability. I enjoy coding from scratch, bringing ideas to life with clean, efficient solutions. I'm also an active open-source contributor, constantly learning new skills to stay current with industry trends. </p>
+        <p class="contact-text mb-4">My commitment to crafting high-quality, impactful software reflects my dedication to continuous improvement and professional growth.</p>
+        <img src="https://example.com/assets/images/signatures.png" alt="Baikuntha Behera" class="signatures mt-4 w-48 fade-in"
           loading="lazy" />
       </div>
-      <form action="#" class="contact-form md:w-1/2 bg-gray-800 p-6 rounded-lg shadow-md fade-in" netlify>
+      <form action="#" class="contact-form md:w-1/2 bg-gray-800 p-6 rounded-lg  fade-in" netlify>
         <div class="form-field mb-4">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" required
@@ -614,7 +551,7 @@
         <div class="form-field mb-4">
           <label for="message">How can I help you?</label>
           <textarea name="message" id="message" required
-            class="w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+            class="w-full px-3 py-2 border border-gray-300 rounded-md text-black"></textarea>
         </div>
         <button type="submit"
           class="btn btn-cta w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-md transition duration-300">Send</button>
@@ -633,10 +570,23 @@
       <div>
         <p>&copy; 2024 Baikuntha Behera</p>
       </div>
-      <div>
-        <a href="https://github.com/Baikun1" class="text-blue-400 hover:underline">GitHub</a> |
-        <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400 hover:underline">LinkedIn</a>
+      <div class="flex space-x-4 items-center">
+        <a href="https://github.com/Baikun1" class="text-blue-400 hover:underline flex items-center">
+          <i class="fab fa-github fa-lg"></i>
+          <span class="ml-2">GitHub</span>
+        </a>
+        <span>|</span>
+        <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400 hover:underline flex items-center">
+          <i class="fab fa-linkedin fa-lg"></i>
+          <span class="ml-2">LinkedIn</span>
+        </a>
+        <span>|</span>
+        <a href="mailto:bbaikuntha87@gmail.com" class="text-blue-400 hover:underline flex items-center">
+          <i class="fas fa-envelope fa-lg"></i>
+          <span class="ml-2">bbaikuntha87@gmail.com</span>
+        </a>
       </div>
+      
     </div>
   </footer>
 
