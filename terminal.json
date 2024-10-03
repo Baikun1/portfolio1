@@ -5,10 +5,21 @@
     " I specialize in creating innovative solutions and building robust applications. ",
     " With a strong foundation in computer science and hands-on experience in various technologies, I am passionate about coding and problem-solving. "
   ],
-  "about": "<span class='text-red-400'> I am an enthusiastic software developer with a Bachelor of Technology in Computer Science from BPUT University. </span> I have developed a keen interest in web development, data analysis, and system optimization. My journey in technology has been marked by continuous learning and exploration of new trends in software engineering. I aim to leverage my skills to contribute to impactful projects and collaborate with like-minded professionals. ",
+  "about": [
+    "<span class='text-red-400'> I am an enthusiastic software developer with a Bachelor of Technology in Computer Science from BPUT University</span> ",
+   "<span class='text-red-600'> I have developed a keen interest in web development</span>",
+    "<span class='text-red-800'>data analysis, and system optimization.</span>",
+    "My journey in technology has been marked by continuous learning and exploration of new trends in software engineering.",
+    "I aim to leverage my skills to contribute to impactful projects and collaborate with like-minded professionals."
+    ],
+
   "education": [
-    " <span class='text-blue-400'>Bachelor of Technology in Computer Science</span> from BPUT University (2020-2024) ",
-    " Relevant coursework includes: <span class='text-green-400'>Advanced Data Structures</span>, <span class='text-green-400'>Machine Learning</span>, <span class='text-green-400'>Web Development</span>, <span class='text-green-400'>Software Engineering</span>, and <span class='text-green-400'>Cloud Computing</span>. "
+    " <span class='text-blue-300'>Bachelor of Technology in Computer Science</span> from BPUT University (2020-2024) ",
+    " Relevant coursework includes: <span class='text-green-400'>Advanced Data Structures</span>",
+     "<span class='text-green-400'>Machine Learning</span>",
+      "<span class='text-green-500'>Web Development</span>",
+       "<span class='text-green-600'>Software Engineering</span>",
+        "and <span class='text-green-700'>Cloud Computing</span>. "
   ],
   "technicalSkills": [
     " <span class='text-blue-400'>Programming languages:</span> Java, Python, JavaScript, C++, HTML/CSS ",
