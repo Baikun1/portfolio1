@@ -38,14 +38,35 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: auto;
+  scrollbar-width:none;
+  background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+  min-height: 100vh; 
+}
+@media (min-width: 1024px) {
+  body {
+    background-image: url('https://images.unsplash.com/photo-1479762937580-3b682a10a0d8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+}
+
+/* Medium screens (e.g. tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-image: url('https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+}
+
+/* Small screens (e.g. mobile) */
+@media (max-width: 767px) {
+  body {
+    background-image: url('https://images.unsplash.com/photo-1669399059793-cb319d43cbba?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
 }
 
 #background {
@@ -57,30 +78,6 @@ body {
   z-index: -1;
 }
 
-.project-card {
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  height: 100%;
-  /* Makes the card stretch to fit content */
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-iframe {
-  overflow: auto;
-}
-
-.project-card {
-  border-top: 1px solid var(--border);
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
-  background-color: var(--bg-color-primary);
-  transform: translateY(calc(-1 * var(--radius)));
-}
 
 /* Blinking indicator */
 .blink {
@@ -91,4 +88,21 @@ iframe {
   to {
     visibility: hidden;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  display: none;
+}
+.curve {
+  content: '';
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  background-color: #0f0f10;
+  height: 85%;
 }
