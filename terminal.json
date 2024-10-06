@@ -1,6 +1,6 @@
 {
   "introduction": [
-    "<span class='text-yellow-400'>Welcome to my interactive terminal!</span>",
+    "<span class='text-red-700'>Welcome to my interactive terminal!</span>",
     " My name is <span class='text-green-400'>Baikuntha Behera,</span> and I am an aspiring <span class='text-green-400'> software developer.</span> ",
     " I specialize in creating innovative solutions and building robust applications. ",
     " With a strong foundation in computer science and hands-on experience in various technologies, I am passionate about coding and problem-solving. "
@@ -19,7 +19,7 @@
      "<span class='text-green-400'>Machine Learning</span>",
       "<span class='text-green-500'>Web Development</span>",
        "<span class='text-green-600'>Software Engineering</span>",
-        "and <span class='text-green-700'>Cloud Computing</span>. "
+        "and <span class='text-green-700'>Cloud Computing </span>. "
   ],
   "technicalSkills": [
     " <span class='text-blue-400'>Programming languages:</span> Java, Python, JavaScript, C++, HTML/CSS ",
