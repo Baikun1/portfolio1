@@ -75,7 +75,7 @@ fetch('./terminal.json')
       'skills': data.technicalSkills,
       'projects': data.projects,
       'blog': data.blog,
-      'help': ["Available commands: intro, about, edu, skills, projects, blog, help, clear, exit"],
+      'help': ["Available commands:", "intro", "about", "edu", "skills", "projects", "blog", "help", "clear", "exit"],
       'clear': ["Clearing the screen..."],
       'exit': ["Exiting the command prompt..."]
     };

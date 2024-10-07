@@ -22,18 +22,18 @@
         "and <span class='text-green-700'>Cloud Computing </span>. "
   ],
   "technicalSkills": [
-    " <span class='text-blue-400'>Programming languages:</span> Java, Python, JavaScript, C++, HTML/CSS ",
-    " <span class='text-blue-400'>Development frameworks:</span> Django, React, Angular ",
-    " <span class='text-blue-400'>Databases:</span> MySQL, MongoDB, PostgreSQL, SQLite ",
-    " Tools and Technologies: Docker, Git, AWS ",
-    " Proficient in software design patterns, RESTful API development, and front-end optimization. "
+    " <span class='text-blue-900'>Programming languages:</span> Java, Python, JavaScript, C++, HTML/CSS ",
+    " <span class='text-blue-600'>Development frameworks:</span> Django, React, Angular ",
+    " <span class='text-blue-300'>Databases:</span> MySQL, MongoDB, PostgreSQL, SQLite ",
+    " <span class='text-blue-100'>Tools and Technologies:</span> Docker, Git, AWS ",
+    " <span class='text-yellow-100'>Proficient in software design patterns, RESTful API development, and front-end optimization.</span> "
   ],
   "projects": [
-    " <span class='text-green-400'>Project 1: Personal Website</span> - Developed a fully responsive personal website to showcase my portfolio and blog. The website features interactive elements, a user-friendly interface, and a content management system. ",
-    " <span class='text-green-400'>Project 2: Chatbot Application</span> - Built an intelligent chatbot for customer support using Python and natural language processing techniques. Integrated with various communication platforms to provide real-time assistance. ",
-    " <span class='text-green-400'>Project 3: To-Do List App</span> - Created a task management application with features like task prioritization, notifications, and data synchronization. Implemented with a sleek user interface and efficient backend functionality. ",
-    " <span class='text-green-400'>Project 4: Solar Energy Harvesting System</span> - Designed and implemented a system for optimizing solar energy capture and storage. The project involved data analysis, simulation, and real-world testing to achieve high precision in energy estimation. ",
-    " <span class='text-green-400'>Project 5: E-commerce Platform</span> - Developed a scalable e-commerce platform with features like product catalog, shopping cart, order management, and payment processing. Ensured a secure and seamless user experience. "
+    " <span class='text-green-900'>Project 1: Personal Website</span> - Developed a fully responsive personal website to showcase my portfolio and blog. The website features interactive elements, a user-friendly interface, and a content management system. ",
+    " <span class='text-green-700'>Project 2: Chatbot Application</span> - Built an intelligent chatbot for customer support using Python and natural language processing techniques. Integrated with various communication platforms to provide real-time assistance. ",
+    " <span class='text-green-500'>Project 3: To-Do List App</span> - Created a task management application with features like task prioritization, notifications, and data synchronization. Implemented with a sleek user interface and efficient backend functionality. ",
+    " <span class='text-green-300'>Project 4: Solar Energy Harvesting System</span> - Designed and implemented a system for optimizing solar energy capture and storage. The project involved data analysis, simulation, and real-world testing to achieve high precision in energy estimation. ",
+    " <span class='text-green-100'>Project 5: E-commerce Platform</span> - Developed a scalable e-commerce platform with features like product catalog, shopping cart, order management, and payment processing. Ensured a secure and seamless user experience. "
   ],
   "blog": [
     " <span class='text-purple-400'>Blog Post 1: 'Navigating the Future of Web Development'</span> - An in-depth analysis of emerging trends in web development, including the rise of serverless architecture and advancements in front-end frameworks. ",
