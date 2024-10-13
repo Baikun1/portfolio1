@@ -1,23 +1,60 @@
-/* Custom Tailwind Classes for Animations */
+/* Keyframes for animations */
 @keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
+  50% { border-color: transparent; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes blink-animation {
+  to { visibility: hidden; }
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat fixed;
+  min-height: 100vh;
+  overflow: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Background transitions for different screens */
+@media (min-width: 1024px) {
+  body {
+    background-image: url('https://images.unsplash.com/photo-1479762937580-3b682a10a0d8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-image: url('https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: url('https://images.unsplash.com/photo-1669399059793-cb319d43cbba?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+}
+
+/* Typewriter effect */
 .typewriter p {
-  animation: typewriter 4s steps(40, end) 1s 1 normal both,
-    blink 500ms steps(40, end) infinite;
+  animation: typewriter 4s steps(40, end) 1s 1 both, blink 500ms steps(40, end) infinite;
 }
 
 .blinking-cursor::after {
@@ -30,79 +67,69 @@
   animation: blink 1s steps(2, start) infinite;
 }
 
-.terminal-body {
-  overflow-y: auto;
-  max-height: 210px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: auto;
-  scrollbar-width:none;
-  background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-
-  min-height: 100vh; 
-}
-@media (min-width: 1024px) {
-  body {
-    background-image: url('https://images.unsplash.com/photo-1479762937580-3b682a10a0d8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
-}
-
-/* Medium screens (e.g. tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    background-image: url('https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
-}
-
-/* Small screens (e.g. mobile) */
-@media (max-width: 767px) {
-  body {
-    background-image: url('https://images.unsplash.com/photo-1669399059793-cb319d43cbba?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
-}
-
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-
-/* Blinking indicator */
-.blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-
-
+/* Scrollbar Hidden */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
   display: none;
 }
+
+/* Curve for the bottom */
 .curve {
-  content: '';
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
   position: absolute;
   bottom: 0;
-  z-index: -1;
   width: 100%;
   background-color: #0f0f10;
   height: 85%;
+  animation: slideIn 1s ease-out;
+}
+
+/* Typing effect */
+.typewrite {
+  display: inline-block;
+  border-right: 2px solid #ffcc00;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.typewrite span {
+  display: inline-block;
+  animation: typing 3.5s steps(40, end) infinite alternate;
+}
+
+/* Headings with responsive sizes */
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Terminal body for auto-scroll */
+/* .terminal-body {
+  overflow-y: auto;
+  max-height: 210px;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+} */
+
+/* Blinking indicator */
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
 }
