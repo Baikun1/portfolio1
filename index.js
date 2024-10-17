@@ -1,5 +1,16 @@
+// nav elements
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
+
+
+// terminal elements
+const terminalContainer = document.getElementById('terminal-container');
+const terminalHeader = document.getElementById('terminal-header');
+const terminalOutput = document.getElementById('terminal-output');
+const terminalInput = document.getElementById('terminal-input');
+const terminalToggleBtn = document.getElementById('terminal-toggle-btn');
+
+let commands = {};
 
 navToggle.addEventListener('click', () => {
   const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
@@ -56,43 +67,45 @@ window.onload = function () {
       new TxtType(elements[i], JSON.parse(toRotate), period);
     }
   }
-  // Inject CSS for cursor
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
   document.body.appendChild(css);
 };
-// terminal script
-const terminalContainer = document.getElementById('terminal-container');
-const terminalHeader = document.getElementById('terminal-header');
-const terminalOutput = document.getElementById('terminal-output');
-const terminalInput = document.getElementById('terminal-input');
-const terminalToggleBtn = document.getElementById('terminal-toggle-btn');
 
-let commands = {};
 
-// Fetch the JSON data
 fetch('./terminal.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
+    if (!data || typeof data !== 'object') {
+      throw new Error('Invalid JSON data');
+    }
+
     commands = {
-      'intro': data.introduction,
-      'about': data.about,
-      'edu': data.education,
-      'skills': data.technicalSkills,
-      'projects': data.projects,
-      'blog': data.blog,
+      'intro': data.introduction || 'No introduction available',
+      'about': data.about || 'No about information available',
+      'edu': data.education || 'No education information available',
+      'skills': data.technicalSkills || 'No technical skills available',
+      'projects': data.projects || 'No projects available',
+      'blog': data.blog || 'No blog available',
       'help': ["Available commands:", "intro", "about", "edu", "skills", "projects", "blog", "help", "clear", "exit"],
       'clear': ["Clearing the screen..."],
       'exit': ["Exiting the command prompt..."]
     };
   })
-  .catch(error => console.error('Error fetching JSON data:', error));
+  .catch(error => {
+    console.error('Error fetching or parsing JSON data:', error);
+  });
 
 const subCommands = {
   'email': ["Email: bbaikuntha87@gmail.com"],
-  'github': ["GitHub: (link unavailable)"],
-  'linkedin': ["LinkedIn: (link unavailable)"]
+  'github': ["GitHub: https://github.com/Baikun1"],
+  'linkedin': ["LinkedIn: https://www.linkedin.com/in/baikuntha-behera-6b255220b/"]
 };
 
 // Handle key events for terminal input
@@ -129,7 +142,7 @@ function handleKey(event) {
 function showLoadingEffect(callback) {
   let dots = '';
   const intervalId = setInterval(() => {
-    dots = dots.length < 3 ? dots + '.' : '';
+    dots = dots.length < 5 ? dots + '.' : '';
     terminalOutput.lastChild.textContent = `Loading${dots}`;
   }, 500);
 
@@ -213,67 +226,77 @@ setTimeout(() => {
 }, 5000);
 
 
+// Constants
+const ANIMATION_INTERVAL = 20; // ms
+const PROGRESS_BARS = [
+  { id: 'html', width: '90%' },
+  { id: 'css', width: '85%' },
+  { id: 'js', width: '75%' },
+  { id: 'bootstrap', width: '80%' },
+  { id: 'tailwind', width: '70%' },
+  { id: 'mysql', width: '75%' },
+  { id: 'oracle', width: '65%' },
+  { id: 'python', width: '85%' },
+  { id: 'pandas', width: '80%' },
+  { id: 'tensorflow', width: '70%' },
+  { id: 'numpy', width: '75%' },
+  { id: 'oop', width: '80%' }
+];
 
-document.addEventListener('DOMContentLoaded', function () {
-  const educationItems = document.querySelectorAll('.bnc');
-
+// Function to create and configure an IntersectionObserver
+function createIntersectionObserver(callback) {
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('bounce');
-        observer.unobserve(entry.target); // Stop observing once the item has animated
+        callback();
+        observer.unobserve(entry.target);
       }
     });
   });
+  return observer;
+}
 
-  educationItems.forEach(item => {
-    observer.observe(item);
-  });
-});
-
-
+// Function to animate progress bars
 function animateProgressBars() {
-  // Define the target widths for each progress bar
-  const progressBars = [
-    { id: 'html', width: '90%' },
-    { id: 'css', width: '85%' },
-    { id: 'js', width: '75%' },
-    { id: 'bootstrap', width: '80%' },
-    { id: 'tailwind', width: '70%' },
-    { id: 'mysql', width: '75%' },
-    { id: 'oracle', width: '65%' },
-    { id: 'python', width: '85%' },
-    { id: 'pandas', width: '80%' },
-    { id: 'tensorflow', width: '70%' },
-    { id: 'numpy', width: '75%' },
-    { id: 'oop', width: '80%' }
-  ];
-
-  // Animate each progress bar
-  progressBars.forEach(bar => {
+  PROGRESS_BARS.forEach((bar) => {
     const element = document.getElementById(bar.id);
     let width = 0;
-    const interval = setInterval(() => {
+    const intervalId = setInterval(() => {
       if (width >= parseInt(bar.width)) {
-        clearInterval(interval);
+        clearInterval(intervalId);
       } else {
         width++;
-        element.style.width = width + '%';
+        element.style.width = `${width}%`;
       }
-    }, 20); // Adjust the speed of the animation here
+    }, ANIMATION_INTERVAL);
   });
 }
 
-// Create an Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateProgressBars();
-      observer.unobserve(entry.target); // Stop observing after the animation
-    }
+// Function to handle education items
+function handleEducationItems() {
+  const educationItems = document.querySelectorAll('.bnc');
+  const observer = createIntersectionObserver(() => {
+    educationItems.forEach((item) => {
+      item.classList.add('bounce');
+    });
   });
-});
+  educationItems.forEach((item) => {
+    observer.observe(item);
+  });
+}
 
-// Observe the section containing the progress bars
-const progressSection = document.getElementById('skills'); // Change this to your section ID
-observer.observe(progressSection);
+// Function to handle progress section
+function handleProgressSection() {
+  const progressSection = document.getElementById('skills');
+  const observer = createIntersectionObserver(animateProgressBars);
+  observer.observe(progressSection);
+}
+
+// Main function
+function main() {
+  handleEducationItems();
+  handleProgressSection();
+}
+
+// Call the main function when the DOM is ready
+document.addEventListener('DOMContentLoaded', main);
