@@ -13,69 +13,125 @@
 </head>
 
 
-<body class=" min-h-screen bg-cover bg-center bg-no-repeat bg-fixed ">
+<body class="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-800">
+
+
 
   <!-- <canvas id="background"></canvas> -->
-  <header class="bg-gradient-to-br from-black to-gray-600 py-3 sticky top-0 z-50">
+  <header class="bg-gradient-to-br from-black to-gray-600 py-2 sticky top-0 z-50 shadow-lg">
     <div class="container mx-auto px-6 flex flex-wrap justify-between items-center">
-      
-      <div class="w-full md:w-auto">
+      <!-- Branding and Navigation Toggle (Mobile) -->
+      <div class="flex items-center justify-between w-full md:w-auto">
         <h1 class="text-2xl md:text-3xl font-bold text-white">Baikuntha Behera</h1>
+        <button
+          class="md:hidden flex items-center px-3 py-2 border rounded text-white focus:outline-none hover:text-blue-600 transition-all duration-300"
+          id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-  
-      <nav class="w-full md:w-auto mt-3 md:mt-0">
-        <ul class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
-          <li><a href="./resumeBaikuntha7_10_24.docx" class="text-white hover:text-blue-600">Resume</a></li>
-          <li><a href="#projects" class="text-white hover:text-blue-600">My Works</a></li>
-          <!-- <li><a href="https://baikun1.github.io/bloging" class="text-white hover:text-blue-600">Blog</a></li> -->
-          <li><a href="#contact" class="text-white hover:text-blue-600">Contacts</a></li>
-          <li><a href="#introduction" class="text-white hover:text-blue-600">Introduction</a></li>
+
+      <!-- Navigation Menu -->
+      <nav class="md:w-auto mt-3 md:mt-0 relative" aria-label="Main navigation">
+        <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 hidden md:flex" id="nav-menu">
+          <li><a href="./resumeBaikuntha7_10_24.docx" download
+              class="text-white hover:text-blue-600 transition-all duration-300">Download Resume</a></li>
+          <li><a href="#projects" class="text-white hover:text-blue-600 transition-all duration-300">My Works</a></li>
+          <li><a href="#contact" class="text-white hover:text-blue-600 transition-all duration-300">Contacts</a></li>
+          <li><a href="#introduction"
+              class="text-white hover:text-blue-600 transition-all duration-300">Introduction</a></li>
+          <li>
+            <a href="#terminal" class="text-white hover:text-blue-600 transition-all duration-300"
+              id="terminal-toggle-btn">
+              <i class=" fas fa-terminal"></i>
+            </a>
+          </li>
         </ul>
       </nav>
-  
     </div>
   </header>
-  
 
   <!-- interduction -->
   <section id="container"
-    class="p-20 sm:p-16 md:p-20 lg:p-24 xl:p-20 w-auto flex flex-col md:flex-row px-4 sm:px-8 md:px-24 lg:px-24 xl:px-24 relative">
-    
-
-    <div class="mr-10 opacity-1">
+    class="p-10 sm:p-16 md:p-20 lg:p-24 xl:p-28 flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
+    <!-- Profile Image -->
+    <div class="mr-0 md:mr-10 relative group overflow-hidden bnc">
       <img
-        class="rounded-lg min-w-[100px] w-full h-auto md:w-auto md:h-auto opacity-30 hover:opacity-100 hidden lg:block md:block"
+        class="rounded-lg opacity-90 transition-transform duration-500 ease-in-out transform hover:scale-110 hover:opacity-100 hover:shadow-md hover:shadow-gray-500/30"
         src="./media/profil.jpg" alt="Profile Picture of Baikuntha Behera" />
+
+      <div
+        class="absolute bottom-0 left-0 w-full h-1/4 bg-gray-800 opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex flex-col items-center justify-end p-2 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
+        <div class="text-white text-lg font-semibold">Baikuntha Behera</div>
+        <div class="text-gray-300">Software Developer</div>
+        <div class="flex space-x-4 mt-2">
+          <a href="mailto:bbaikuntha87@gmail.com" class="text-white hover:text-blue-500 transition-colors">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com/Baikun1" class="text-white hover:text-gray-300 transition-colors">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yourprofile" class="text-white hover:text-blue-400 transition-colors">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <div class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]">
-      <h1 class="text-white font-bold text-3xl mt-6 mb-8">
-        Hey, it's me, Baikuntha Behera
+    </div>
+
+
+
+    <!-- Text Content -->
+    <div
+      class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%] space-y-6 text-center md:text-left animate__animated animate__fadeIn">
+      <!-- Heading -->
+      <h1 class="text-white font-extrabold text-4xl md:text-5xl leading-tight">
+        Hey, it's me, <span class="text-red-800">Baikuntha Behera</span>
       </h1>
 
-      <h1 class="mb-6">
-        <span class="typewrite text-xl font-medium text-yellow-600" data-period="2000"
-          data-type='["Hi, I am Baikuntha","I am a software developer","Enthusiast for developing applications","I code in Python","Dedicated to crafting efficient software solutions","Proficient in Django and web development","SQL specialist with a focus on data insights","Skilled in HTML, CSS, and JavaScript","Full-stack developer with a passion for quality","Eager to explore new technologies and frameworks","Detail-oriented and meticulous in my approach","Collaborative team player with excellent communication skills","Adaptable and responsive to changing project requirements","Continuous learner, staying updated with industry trends","Problem-solver with a creative approach","Focused on delivering high-quality solutions on time","Passionate about leveraging technology for social impact","Proficient in Agile methodologies for efficient project management","Strong understanding of software design patterns and principles","Excited to bring innovative ideas to life through code"]'>
+      <!-- Typewriter Effect -->
+      <h2 class="text-yellow-400 text-2xl font-medium">
+        <span class="typewrite" data-period="2000"
+          data-type='["Hi, I am Baikuntha", "I am a software developer", "Enthusiast for developing applications", "I code in Python", "Dedicated to crafting efficient software solutions"]'>
         </span>
-      </h1>
+      </h2>
 
-      <p class="text-lg text-white">
-        I am Baikuntha Behera, an aspiring software developer with a B.Tech in Computer Science. I am passionate about
+      <!-- Introduction Paragraph -->
+      <p class="text-lg text-gray-300 leading-relaxed">
+        I am Baikuntha Behera, an aspiring software developer with a B.Tech in Computer Science. Passionate about
         software development, web design, and project management. Skilled in multiple programming languages and
-        frameworks, I am eager to contribute to organizational growth in a dynamic environment.
+        frameworks,
+        eager to contribute to organizational growth.
       </p>
 
-      <div class="mt-3">
-        <a href="#contact" class="text-blue-400 hover:underline">
+      <!-- Action Buttons -->
+      <div class="flex justify-center md:flex-row flex-col md:space-x-4 space-y-4 md:space-y-0">
+        <!-- Hire Me Button -->
+        <a href="#contact">
           <button
-            class="bg-blue-600 text-white font-semibold py-2 px-4 mt-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
-            <i class="fa-solid fa-phone fa-shake" style="color: #ffffff;"></i> Hire Me
+            class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+            <i class="fa-solid fa-phone animate-pulse"></i>
+            <span>Hire Me</span>
           </button>
         </a>
-        <a href="#projects" class="text-green-400 hover:underline">
+
+        <!-- See My Works Button -->
+        <a href="#projects">
           <button
-            class="bg-green-600 text-white font-semibold py-2 px-4 mt-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
-            <i class="fa-sharp-duotone fa-solid fa-laptop fa-fade" style="color: #ffffff;"></i> See My Works
+            class="bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+            <i class="fa-solid fa-laptop"></i>
+            <span>See My Works</span>
+          </button>
+        </a>
+
+        <!-- Download Resume Button -->
+        <a href="./resume.pdf" download>
+          <button
+            class="bg-yellow-500 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+            <i class="fa-solid fa-download"></i>
+            <span>Download Resume</span>
           </button>
         </a>
       </div>
@@ -86,7 +142,7 @@
 
   <!-- terminal -->
   <div id="terminal-container"
-    class="bg-gray-900 rounded-md w-4/5 max-w-3xl h-72 shadow-lg absolute top-20 right-12 hidden lg:block scrollbar-hide overflow-auto">
+    class=" bnc bg-gray-900 rounded-md w-4/5 max-w-3xl h-72 shadow-lg fixed top-20 right-12 z-50 scrollbar-hide overflow-auto hidden ">
     <div id="terminal-header" class="bg-gray-800 p-2 flex justify-between items-center cursor-move">
       <div class="flex gap-2">
         <div class="button close bg-red-500 rounded-full w-3 h-3"></div>
@@ -109,181 +165,145 @@
 
 
   <!-- Education and Skills Section -->
-  <section id="education" class="container mx-auto px-6 py-12  rounded-md relative bg-blend-lighten hidden lg:block">
-    <!-- Title for Education -->
+  <section id="education" class="container mx-auto px-6 py-12 rounded-md relative bg-blend-lighten hidden lg:block">
     <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
-
-    <!-- Education Timeline Container -->
     <div class="relative">
-      <!-- Timeline Bar -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
 
-      <!-- Education Item 1 -->
-      <div class="flex flex-col md:flex-row items-center mb-8 relative">
-        <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <!-- Education Item 1 -->
+        <div class=" bnc education-item flex flex-col md:flex-row items-center mb-8 relative">
+            <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="w-full md:w-1/2 px-4 md:text-right">
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-6 glassmorphism-card">
+                    <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
+                    <p class="text-white">RIT, Berhampur (BPUT)</p>
+                    <p class="text-white">CGPA: 8.4</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2020-2024</div>
         </div>
-        <div class="w-full md:w-1/2 px-4 md:text-right">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg  rounded-md p-6 glassmorphism-card">
-            <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
-            <p class="text-white">RIT, Berhampur (BPUT)</p>
-            <p class="text-white">CGPA: 8.4</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2020-2024</div>
-      </div>
 
-      <!-- Education Item 2 -->
-      <div class="flex flex-col md:flex-row items-center mb-8 relative">
-        <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <!-- Education Item 2 -->
+        <div class="education-item bnc flex flex-col md:flex-row items-center mb-8 relative">
+            <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="w-full md:w-1/2 px-4">
+                <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-6 glassmorphism-card">
+                    <h3 class="text-lg font-medium text-white">Intermediate</h3>
+                    <p class="text-white">Khallikote Junior Science College, Berhampur</p>
+                    <p class="text-white">Marks: 61%</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2018-2020</div>
         </div>
-        <div class="w-full md:w-1/2 px-4 md:text-right order-2 md:order-1 hidden "></div>
-        <div class="w-full md:w-1/2 px-4">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg  rounded-md p-6 glassmorphism-card">
-            <h3 class="text-lg font-medium text-white">Intermediate</h3>
-            <p class="text-white">Khallikote Junior Science College, Berhampur</p>
-            <p class="text-white">Marks: 61%</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2018-2020</div>
-      </div>
-
-
     </div>
+</section>
 
 
-
-
-
-
-  </section>
   <!-- skill  -->
-  <section id="skills" class="p-8 rounded-md  px-6 py-12 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-    <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
+<section id="skills" class="p-8 rounded-md bg-gray-800 px-6 py-12 sm:w-full md:w-3/4 lg:w-1/2 xl:w-1/3 mx-auto">
+  <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
 
-    <!-- Web Development Skills -->
-    <div class="space-y-4">
-      <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">HTML5</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="html" class="bg-red-600 h-4 rounded-full" style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">CSS3</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">JavaScript</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Bootstrap</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS"
-          class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Tailwind CSS</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
-        </div>
+  <!-- Web Development Skills -->
+  <div class="space-y-4">
+    <h3 class="text-2xl font-semibold text-white mb-4">Web Development</h3>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">HTML5</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="html" class="bg-red-600 h-4 rounded-full" style="width: 90%;"></div>
       </div>
     </div>
-
-    <!-- SQL/Database Skills -->
-    <div class="space-y-4 mt-6">
-      <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">MySQL</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Oracle</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
-        </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">CSS3</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
       </div>
     </div>
-
-    <!-- Python Skills -->
-    <div class="space-y-4 mt-6">
-      <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
-      <!-- Python Modules -->
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Python</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
-        </div>
-      </div>
-      <!-- Pandas -->
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Pandas</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-      <!-- TensorFlow -->
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">TensorFlow</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
-        </div>
-      </div>
-      <!-- NumPy -->
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">NumPy</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
-      </div>
-      <!-- Python Concepts -->
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">OOPs, Data Structures</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">JavaScript</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
       </div>
     </div>
-
-    <!-- Tools and Other Skills -->
-    <div class="space-y-4 mt-6">
-      <h3 class="text-2xl font-semibold text-white mb-4">My tool kits</h3>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Git</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="git" class="bg-red-500 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/django.png" alt="Django" class="w-8 h-8 mr-2">
-        <label class="text-white font-medium w-1/4">Django</label>
-        <div class="w-full bg-gray-800 rounded-full h-4 dark:bg-gray-700">
-          <div id="django" class="bg-green-400 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">Bootstrap</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
       </div>
     </div>
-  </section>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS"
+        class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">Tailwind CSS</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SQL/Database Skills -->
+  <div class="space-y-4 mt-6">
+    <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">MySQL</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">Oracle</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Python Skills -->
+  <div class="space-y-4 mt-6">
+    <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">Python</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">Pandas</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">TensorFlow</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">NumPy</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+      </div>
+    </div>
+    <div class="flex items-center">
+      <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts" class="w-8 h-8 mr-2">
+      <label class="text-white font-medium w-1/4">OOPs, Data Structures</label>
+      <div class="w-full bg-gray-700 rounded-full h-4">
+        <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- projects -->
 
   <section id="projects" class="p-6">
@@ -291,7 +311,8 @@
     <div class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-between gap-8">
 
       <!-- Project Card: Power BI Project -->
-      <div class="flex flex-col lg:flex-row w-full lg:w-full bg-white rounded-lg overflow-hidden  opacity-60 hover:opacity-100">
+      <div
+        class="flex flex-col lg:flex-row w-full lg:w-full bg-white rounded-lg overflow-hidden  opacity-60 hover:opacity-100">
         <div class="flex-grow">
           <h3 class="text-2xl font-medium mb-2">Power BI Project</h3>
           <p class="mt-2 mb-2">Created a data visualization project using Power BI to analyze and present data trends
@@ -306,7 +327,8 @@
       </div>
 
       <!-- Project Card: Tailor Ecommerce Website -->
-      <div class="flex flex-col lg:flex-row w-full lg:w-full bg-white rounded-lg overflow-hidden  opacity-60 hover:opacity-100">
+      <div
+        class="flex flex-col lg:flex-row w-full lg:w-full bg-white rounded-lg overflow-hidden  opacity-60 hover:opacity-100">
         <div class="w-full lg:w-1/2 lg:pr-4 text-right">
           <a href="https://github.com/Baikun1/stichfit">
             <img class="w-full h-full object-cover rounded-md"
@@ -331,7 +353,8 @@
       </div>
 
       <!-- Project Card: Typing Test -->
-      <div class="flex flex-col lg:flex-row w-full lg:w-full bg-gray-800 rounded-lg overflow-hidden p-4 opacity-60 hover:opacity-100">
+      <div
+        class="flex flex-col lg:flex-row w-full lg:w-full bg-gray-800 rounded-lg overflow-hidden p-4 opacity-60 hover:opacity-100">
         <div class="flex-grow">
           <h3 class="text-2xl font-medium mb-2">Typing Test</h3>
           <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
@@ -415,7 +438,7 @@
             </button>
           </a>
         </div>
-        
+
       </div>
 
 
@@ -434,10 +457,12 @@
 
 
       <!-- Project Card: Bank Management System -->
-      <div class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+      <div
+        class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
         <div class="lg:w-1/2 p-4">
           <h3 class="text-lg font-medium mb-2 text-white">Bank Management System</h3>
-          <p class="mb-2 text-white">Created a bank management system using Django to handle various banking operations such as
+          <p class="mb-2 text-white">Created a bank management system using Django to handle various banking operations
+            such as
             account management, transaction processing, and user authentication.</p>
           <p class="text-white"><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
           <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center text-white">
@@ -454,10 +479,12 @@
       </div>
 
       <!-- Project Card: QR Code Generator -->
-      <div class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+      <div
+        class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
         <div class="lg:w-1/2 p-4">
           <h3 class="text-lg font-medium mb-2 text-white">QR Code Generator</h3>
-          <p class="mb-2 text-white">Developed a web application for generating QR codes. Allows users to input data and generate a
+          <p class="mb-2 text-white">Developed a web application for generating QR codes. Allows users to input data and
+            generate a
             corresponding QR code image for various uses.</p>
           <p class="text-white"><strong>Technologies:</strong> Python</p>
           <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center text-white">
@@ -474,10 +501,12 @@
       </div>
 
       <!-- Project Card: Password Generator -->
-      <div class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+      <div
+        class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
         <div class="lg:w-1/2 p-4">
           <h3 class="text-lg font-medium mb-2 text-white">Password Generator</h3>
-          <p class="mb-2 text-white">Developed a web application for generating passwords. Allows users to input data and generate
+          <p class="mb-2 text-white">Developed a web application for generating passwords. Allows users to input data
+            and generate
             a corresponding password.</p>
           <p class="text-white"><strong>Technologies:</strong> Python</p>
           <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center text-white">

@@ -1,66 +1,73 @@
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
 
+navToggle.addEventListener('click', () => {
+  const isExpanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+  navToggle.setAttribute('aria-expanded', !isExpanded);
+  navMenu.classList.toggle('hidden');
+});
 var TxtType = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
 };
 
 TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else { 
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+  this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-    var that = this;
-    var delta = 200 - Math.random() * 100;
+  var that = this;
+  var delta = 200 - Math.random() * 100;
 
-    if (this.isDeleting) { delta /= 2; }
+  if (this.isDeleting) { delta /= 2; }
 
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-    }
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
 
-    setTimeout(function () {
-        that.tick();
-    }, delta);
+  setTimeout(function () {
+    that.tick();
+  }, delta);
 };
 
 window.onload = function () {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
+  var elements = document.getElementsByClassName('typewrite');
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-type');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
     }
-    // Inject CSS for cursor
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
-    document.body.appendChild(css);
-}; 
-
-// terminal
+  }
+  // Inject CSS for cursor
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
+  document.body.appendChild(css);
+};
+// terminal script
 const terminalContainer = document.getElementById('terminal-container');
 const terminalHeader = document.getElementById('terminal-header');
 const terminalOutput = document.getElementById('terminal-output');
 const terminalInput = document.getElementById('terminal-input');
+const terminalToggleBtn = document.getElementById('terminal-toggle-btn');
 
 let commands = {};
 
@@ -195,9 +202,78 @@ terminalInput.addEventListener('blur', () => {
 // Initialize terminal input functionality
 terminalInput.addEventListener('keydown', handleKey);
 
-// Hide terminal on scroll
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 0) {
-    terminalContainer.classList.add('hidden');
-  }
+// Function to toggle terminal visibility
+terminalToggleBtn.addEventListener('click', () => {
+  terminalContainer.classList.toggle('hidden');
 });
+
+// Show terminal after 5 seconds of page load
+setTimeout(() => {
+  terminalContainer.classList.remove('hidden');
+}, 5000);
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const educationItems = document.querySelectorAll('.bnc');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('bounce');
+        observer.unobserve(entry.target); // Stop observing once the item has animated
+      }
+    });
+  });
+
+  educationItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+
+
+function animateProgressBars() {
+  // Define the target widths for each progress bar
+  const progressBars = [
+    { id: 'html', width: '90%' },
+    { id: 'css', width: '85%' },
+    { id: 'js', width: '75%' },
+    { id: 'bootstrap', width: '80%' },
+    { id: 'tailwind', width: '70%' },
+    { id: 'mysql', width: '75%' },
+    { id: 'oracle', width: '65%' },
+    { id: 'python', width: '85%' },
+    { id: 'pandas', width: '80%' },
+    { id: 'tensorflow', width: '70%' },
+    { id: 'numpy', width: '75%' },
+    { id: 'oop', width: '80%' }
+  ];
+
+  // Animate each progress bar
+  progressBars.forEach(bar => {
+    const element = document.getElementById(bar.id);
+    let width = 0;
+    const interval = setInterval(() => {
+      if (width >= parseInt(bar.width)) {
+        clearInterval(interval);
+      } else {
+        width++;
+        element.style.width = width + '%';
+      }
+    }, 20); // Adjust the speed of the animation here
+  });
+}
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateProgressBars();
+      observer.unobserve(entry.target); // Stop observing after the animation
+    }
+  });
+});
+
+// Observe the section containing the progress bars
+const progressSection = document.getElementById('skills'); // Change this to your section ID
+observer.observe(progressSection);

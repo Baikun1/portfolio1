@@ -1,3 +1,18 @@
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s ease;
+}
 /* Custom Tailwind Classes for Animations */
 @keyframes typewriter {
   from {
@@ -14,7 +29,27 @@
     border-color: transparent;
   }
 }
+.animate-floating-slow {
+  animation: float 4s ease-in-out infinite;
+}
 
+/* Simple hover effect */
+img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Keyframes for slow floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .typewriter p {
   animation: typewriter 4s steps(40, end) 1s 1 normal both,
     blink 500ms steps(40, end) infinite;
@@ -35,49 +70,21 @@
   max-height: 210px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: auto;
-  scrollbar-width:none;
-  background-image: url('https://images.unsplash.com/photo-1510519138101-570d1dca3d66?q=80&w=1447&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-
-  min-height: 100vh; 
-}
-@media (min-width: 1024px) {
-  body {
-    background-image: url('https://images.unsplash.com/photo-1479762937580-3b682a10a0d8?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+@keyframes fill {
+  from {
+      width: 0%;
+  }
+  to {
+      width: var(--progress);
   }
 }
 
-/* Medium screens (e.g. tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    background-image: url('https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
-}
-
-/* Small screens (e.g. mobile) */
-@media (max-width: 767px) {
-  body {
-    background-image: url('https://images.unsplash.com/photo-1669399059793-cb319d43cbba?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  }
-}
-
-#background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.progress-bar {
+  transition: width 1s ease;
+  width: 0; /* Start at 0% width */
   height: 100%;
-  z-index: -1;
+  background-color: inherit; /* Ensure the color is inherited */
 }
-
 
 /* Blinking indicator */
 .blink {
@@ -106,3 +113,26 @@ body {
   background-color: #0f0f10;
   height: 85%;
 }
+/* style.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+    animation-name: fadeInRight;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+}
+
