@@ -142,7 +142,7 @@
 
   <!-- terminal -->
   <div id="terminal-container"
-    class=" bnc bg-gray-900 rounded-md w-4/5 max-w-3xl h-72 shadow-lg fixed top-20 right-12 z-50 scrollbar-hide overflow-auto hidden ">
+    class=" bnc bg-gray-900 rounded-md w-4/5 max-w-3xl h-72 shadow-lg fixed top-20 right-12 z-40 scrollbar-hide overflow-auto hidden ">
     <div id="terminal-header" class="bg-gray-800 p-2 flex justify-between items-center cursor-move">
       <div class="flex gap-2">
         <div class="button close bg-red-500 rounded-full w-3 h-3"></div>
@@ -329,13 +329,18 @@
 
       <!-- Project Card: Power BI Project -->
       <div
-        class="flex flex-col lg:flex-row w-full lg:w-full bg-white rounded-lg overflow-hidden  opacity-60 hover:opacity-100">
-        <div class="flex-grow">
-          <h3 class="text-2xl font-medium mb-2">Power BI Project</h3>
-          <p class="mt-2 mb-2">Created a data visualization project using Power BI to analyze and present data trends
-            effectively.</p>
-          <p><strong>Technologies:</strong> Power BI</p>
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+        <div class="relative flex-grow p-4">
+          <div class="absolute top-0 right-0 lg:text-right">
+            <h3 class="text-2xl font-medium mb-2">Power BI Project</h3>
+            <p class="mt-2 mb-2 overflow-hidden max-h-10 hover:max-h-full transition-all duration-300 ease-in-out">
+              Created a data visualization project using Power BI to analyze and present data trends effectively. 
+              <span class="hidden hover:inline"> The project involved creating detailed dashboards, reports, and real-time analytics. This allowed for better decision-making through interactive data insights.</span>
+            </p>
+            <p><strong>Technologies:</strong> Power BI</p>
+          </div>
         </div>
+        
         <div class="w-full lg:w-1/2 lg:pl-4">
           <iframe title="Power BI Project" width="100%" height="400"
             src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
@@ -345,7 +350,7 @@
 
       <!-- Project Card: Tailor Ecommerce Website -->
       <div
-        class="flex flex-col lg:flex-row w-full lg:w-full bg-white rounded-lg overflow-hidden  opacity-60 hover:opacity-100">
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
         <div class="w-full lg:w-1/2 lg:pr-4 text-right">
           <a href="https://github.com/Baikun1/stichfit">
             <img class="w-full h-full object-cover rounded-md"
@@ -358,7 +363,7 @@
             tailoring and secure payment processing.</p>
           <p><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
           <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-            <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 hover:underline">
+            <a href="https://github.com/Baikun1/stichfit" class="text-blue-400 ">
               <button
                 class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                 <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
@@ -371,8 +376,9 @@
 
       <!-- Project Card: Typing Test -->
       <div
-        class="flex flex-col lg:flex-row w-full lg:w-full bg-gray-800 rounded-lg overflow-hidden p-4 opacity-60 hover:opacity-100">
-        <div class="flex-grow">
+      class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+
+        <div class="flex-grow lg:text-right">
           <h3 class="text-2xl font-medium mb-2">Typing Test</h3>
           <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
           <a href="https://baikun1.github.io/typing-test/" target="_blank" class="flex items-center">
@@ -398,21 +404,53 @@
         </div>
       </div>
 
+
+            <!-- Project Card: To-Do List -->
+            <div class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+              <div class="lg:w-1/2 p-4 text-right">
+                <div class="overflow-hidden relative w-full h-96 transform scale-90 transform-origin-top-left">
+                  <iframe src="https://baikun1.github.io/to-do-list/" class="w-full h-full border-0"
+                    title="To-Do List"></iframe>
+                </div>
+              </div>
+              <div class="lg:w-1/2 p-4">
+                <h3 class="text-lg font-medium mb-2">To-Do List</h3>
+                <p class="mb-2">Manage the tasks efficiently with this interactive to-do list application.</p>
+      
+                <a href="https://baikun1.github.io/to-do-list/" target="_blank" class="text-blue-400 ">
+                  <button
+                    class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    Open in New Tab
+                  </button>
+                </a>
+                <a href="https://github.com/Baikun1/to-do-list" target="_blank" class="text-blue-400 ">
+                  <button
+                    class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                    <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                    Source Code
+                  </button>
+                </a>
+              </div>
+      
+            </div>
       <!-- Project Card: Weather App -->
-      <div class="bg-blue-700  rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+      <div
+      class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+
         <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2 text-white">Weather App</h3>
-          <p class="mb-2 text-white">Get real-time weather updates for any city using this simple weather application.
+          <h3 class="text-lg font-medium mb-2 ">Weather App</h3>
+          <p class="mb-2 ">Get real-time weather updates for any city using this simple weather application.
           </p>
 
-          <a href="https://baikun1.github.io/weather-app/" target="_blank" class="text-blue-400 hover:underline">
+          <a href="https://baikun1.github.io/weather-app/" target="_blank" class="text-blue-400 ">
             <button
               class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center justify-center">
               <i class="fas fa-external-link-alt mr-2"></i>
               Open in New Tab
             </button>
           </a>
-          <a href="https://github.com/Baikun1/weather-app" target="_blank" class="text-blue-400 hover:underline">
+          <a href="https://github.com/Baikun1/weather-app" target="_blank" class="text-blue-400 ">
             <button
               class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center justify-center">
               <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
@@ -428,40 +466,12 @@
         </div>
       </div>
 
-      <!-- Project Card: To-Do List -->
-      <div class="bg-white  rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
-        <div class="lg:w-1/2 p-4 text-right">
-          <div class="overflow-hidden relative w-full h-96 transform scale-90 transform-origin-top-left">
-            <iframe src="https://baikun1.github.io/to-do-list/" class="w-full h-full border-0"
-              title="To-Do List"></iframe>
-          </div>
-        </div>
-        <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2">To-Do List</h3>
-          <p class="mb-2">Manage the tasks efficiently with this interactive to-do list application.</p>
-
-          <a href="https://baikun1.github.io/to-do-list/" target="_blank" class="text-blue-400 hover:underline">
-            <button
-              class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center justify-center">
-              <i class="fas fa-external-link-alt mr-2"></i>
-              Open in New Tab
-            </button>
-          </a>
-          <a href="https://github.com/Baikun1/to-do-list" target="_blank" class="text-blue-400 hover:underline">
-            <button
-              class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center justify-center">
-              <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
-              Source Code
-            </button>
-          </a>
-        </div>
-
-      </div>
 
 
 
 
-      <div class="bg-white bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%]">
+          <!-- rain prediction using ann with tenserflow -->
+      <div class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
         <div class="lg:w-1/2 p-4">
           <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
           <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity and
@@ -475,15 +485,15 @@
 
       <!-- Project Card: Bank Management System -->
       <div
-        class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
         <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2 text-white">Bank Management System</h3>
-          <p class="mb-2 text-white">Created a bank management system using Django to handle various banking operations
+          <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
+          <p class="mb-2 ">Created a bank management system using Django to handle various banking operations
             such as
             account management, transaction processing, and user authentication.</p>
-          <p class="text-white"><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
-          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center text-white">
-            <a href="https://github.com/Baikun1/Bank_project_using_Django" class="text-blue-400 hover:underline">
+          <p class=""><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center ">
+            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
               <button
                 class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                 <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
@@ -497,15 +507,15 @@
 
       <!-- Project Card: QR Code Generator -->
       <div
-        class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
         <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2 text-white">QR Code Generator</h3>
-          <p class="mb-2 text-white">Developed a web application for generating QR codes. Allows users to input data and
+          <h3 class="text-lg font-medium mb-2 ">QR Code Generator</h3>
+          <p class="mb-2 ">Developed a web application for generating QR codes. Allows users to input data and
             generate a
             corresponding QR code image for various uses.</p>
-          <p class="text-white"><strong>Technologies:</strong> Python</p>
-          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center text-white">
-            <a href="https://github.com/Baikun1/qrcodegenerator" class="text-blue-400 hover:underline">
+          <p class=""><strong>Technologies:</strong> Python</p>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
               <button
                 class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                 <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
@@ -519,15 +529,15 @@
 
       <!-- Project Card: Password Generator -->
       <div
-        class="bg-green-900 bg-opacity-20 rounded-md p-6 flex flex-col lg:flex-row w-full lg:w-[48%] opacity-60 hover:opacity-100">
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
         <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2 text-white">Password Generator</h3>
-          <p class="mb-2 text-white">Developed a web application for generating passwords. Allows users to input data
+          <h3 class="text-lg font-medium mb-2">Password Generator</h3>
+          <p class="mb-2 ">Developed a web application for generating passwords. Allows users to input data
             and generate
             a corresponding password.</p>
-          <p class="text-white"><strong>Technologies:</strong> Python</p>
-          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center text-white">
-            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 hover:underline">
+          <p class=""><strong>Technologies:</strong> Python</p>
+          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center ">
+            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
               <button
                 class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
                 <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
@@ -622,21 +632,21 @@
       </div>
       <div class="flex flex-row space-x-4 items-center">
         <!-- GitHub Link -->
-        <a href="https://github.com/Baikun1" class="text-blue-400 hover:underline flex items-center">
+        <a href="https://github.com/Baikun1" class="text-blue-400  flex items-center">
           <i class="fab fa-github fa-lg"></i>
           <span class="ml-2 hidden sm:block">GitHub</span> <!-- Show text only on larger screens -->
         </a>
         <span class="hidden sm:inline">|</span> <!-- Separator visible only on larger screens -->
   
         <!-- LinkedIn Link -->
-        <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400 hover:underline flex items-center">
+        <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400  flex items-center">
           <i class="fab fa-linkedin fa-lg"></i>
           <span class="ml-2 hidden sm:block">LinkedIn</span> <!-- Show text only on larger screens -->
         </a>
         <span class="hidden sm:inline">|</span> <!-- Separator visible only on larger screens -->
   
         <!-- Email Link -->
-        <a href="mailto:bbaikuntha87@gmail.com" class="text-blue-400 hover:underline flex items-center">
+        <a href="mailto:bbaikuntha87@gmail.com" class="text-blue-400  flex items-center">
           <i class="fas fa-envelope fa-lg"></i>
           <span class="ml-2 hidden sm:block">Email</span> <!-- Show text only on larger screens -->
         </a>
