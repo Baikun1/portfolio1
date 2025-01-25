@@ -6,23 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baikuntha Behera - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
   <script src="https://kit.fontawesome.com/7226ead90d.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
 </head>
 
-
 <body class="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-800">
 
-
-
-  <!-- <canvas id="background"></canvas> -->
-  <header class="bg-gradient-to-br from-black to-gray-600 py-2 sticky top-0 z-50 shadow-lg">
+  <header class="bg-gradient-to-br from-black to-gray-600 py-2 sticky top-0 z-50 shadow-lg"
+    style="background: rgba(50, 50, 50, 0.7); backdrop-filter: blur(10px);">
     <div class="container mx-auto px-6 flex flex-wrap justify-between items-center">
-      <!-- Branding and Navigation Toggle (Mobile) -->
       <div class="flex items-center justify-between w-full md:w-auto">
-        <h1 class="text-2xl md:text-3xl font-bold text-white">Baikuntha Behera</h1>
+        <h1 class="text-2xl md:text-3xl font-bold text-white gradient-text">Baikuntha Behera</h1>
         <button
           class="md:hidden flex items-center px-3 py-2 border rounded text-white focus:outline-none hover:text-blue-600 transition-all duration-300"
           id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
@@ -32,7 +27,6 @@
         </button>
       </div>
 
-      <!-- Navigation Menu -->
       <nav class="md:w-auto mt-3 md:mt-0 relative" aria-label="Main navigation">
         <ul class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 hidden md:flex" id="nav-menu">
           <li><a href="./resumeBaikuntha7_10_24.docx" download
@@ -52,274 +46,269 @@
     </div>
   </header>
 
-  <!-- interduction -->
-  <section id="container"
-    class="p-10 sm:p-16 md:p-20 lg:p-24 xl:p-28 flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
-    <!-- Profile Image -->
-    <div class="mr-0 md:mr-10 relative group overflow-hidden bnc">
-      <img
-        class="rounded-lg opacity-90 transition-transform duration-500 ease-in-out transform hover:scale-110 hover:opacity-100 hover:shadow-md hover:shadow-gray-500/30"
-        src="./media/profil.jpg" alt="Profile Picture of Baikuntha Behera" />
+  <div class="flex flex-row w-full">
+    <div class="sticky top-0 h-screen w-572 p-12">
+      <div class="relative group overflow-hidden rounded-lg shadow-lg w-full">
+        <img class="w-28 h-28 mx-auto mt-4 rounded-full border-4 border-gray-300 object-cover" src="./media/profil.jpg"
+          alt="Profile Picture of Baikuntha Behera" />
 
-      <div
-        class="absolute bottom-0 left-0 w-full h-1/4 bg-gray-800 opacity-0 group-hover:opacity-80 transition-opacity duration-300 flex flex-col items-center justify-end p-2 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
-        <div class="text-white text-lg font-semibold">Baikuntha Behera</div>
-        <div class="text-gray-300">Software Developer</div>
-        <div class="flex space-x-4 mt-2">
-          <a href="mailto:bbaikuntha87@gmail.com" class="text-white hover:text-blue-500 transition-colors">
-            <i class="fas fa-envelope"></i>
+        <div class="text-center mt-4">
+          <h2 class="text-lg font-semibold gradient-text">Baikuntha Behera</h2>
+          <p class="text-white text-sm">Software Developer</p>
+          <p class="text-white mt-2 px-4 text-xs">
+            Passionate software developer specializing in creating web applications and dynamic user experiences.
+            Skilled in Python, Django, and JavaScript.
+          </p>
+        </div>
+
+        <div class="flex justify-center space-x-4 mt-4 mb-4">
+          <a href="https://github.com/Baikun1" target="_blank"
+            class="text-white hover:text-gray-800 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.93 0-1.09.39-1.98 1.02-2.68-.1-.25-.44-1.26.1-2.63 0 0 .83-.27 2.75 1.02A9.6 9.6 0 0112 5.85c.84.01 1.68.11 2.47.32 1.91-1.29 2.75-1.02 2.75-1.02.54 1.37.2 2.38.1 2.63.63.7 1.02 1.59 1.02 2.68 0 3.83-2.33 4.68-4.56 4.93.36.31.67.92.67 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" />
+            </svg>
           </a>
-          <a href="https://github.com/Baikun1" class="text-white hover:text-gray-300 transition-colors">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/yourprofile" class="text-white hover:text-blue-400 transition-colors">
-            <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com" target="_blank"
+            class="text-white hover:text-gray-800 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path
+                d="M16 8a6 6 0 00-12 0v8a6 6 0 0012 0V8zM3 8a9 9 0 0118 0v8a9 9 0 01-18 0V8zm9-3a3 3 0 100 6 3 3 0 000-6zM6 18h4v-4H6v4zM14 18h4v-4h-4v4z" />
+            </svg>
           </a>
         </div>
       </div>
     </div>
 
-    </div>
+    <main class="flex-grow p-10 sm:p-16 md:p-20 lg:p-24 xl:p-28">
+      <section id="container" class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
+        <div
+          class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%] space-y-6 text-center md:text-left animate__animated animate__fadeIn">
+          <h1 class="text-white font-extrabold text-4xl md:text-5xl leading-tight">
+            Hey, it's me, <span class="gradient-text">Baikuntha Behera</span>
+          </h1>
 
+          <h2 class="text-yellow-400 text-2xl font-medium">
+            <span class="typewrite" data-period="2000"
+              data-type='["Hi, I am Baikuntha", "I am a software developer", "Enthusiast for developing applications", "I code in Python", "Dedicated to crafting efficient software solutions"]'>
+            </span>
+          </h2>
 
+          <p class="text-lg text-gray-300 leading-relaxed">
+            I am Baikuntha Behera, an aspiring software developer with a B.Tech in Computer Science. Passionate about
+            software development, web design, and project management. Skilled in multiple programming languages and
+            frameworks,
+            eager to contribute to organizational growth.
+          </p>
 
-    <!-- Text Content -->
-    <div
-      class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%] space-y-6 text-center md:text-left animate__animated animate__fadeIn">
-      <!-- Heading -->
-      <h1 class="text-white font-extrabold text-4xl md:text-5xl leading-tight">
-        Hey, it's me, <span class="text-red-800">Baikuntha Behera</span>
-      </h1>
+          <div class="flex justify-center md:flex-row flex-col md:space-x-4 space-y-4 md:space-y-0">
+            <a href="#contact">
+              <button
+                class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                <i class="fa-solid fa-phone animate-pulse"></i>
+                <span>Hire Me</span>
+              </button>
+            </a>
 
-      <!-- Typewriter Effect -->
-      <h2 class="text-yellow-400 text-2xl font-medium">
-        <span class="typewrite" data-period="2000"
-          data-type='["Hi, I am Baikuntha", "I am a software developer", "Enthusiast for developing applications", "I code in Python", "Dedicated to crafting efficient software solutions"]'>
-        </span>
-      </h2>
+            <a href="#projects">
+              <button
+                class="bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                <i class="fa-solid fa-laptop"></i>
+                <span>See My Works</span>
+              </button>
+            </a>
 
-      <!-- Introduction Paragraph -->
-      <p class="text-lg text-gray-300 leading-relaxed">
-        I am Baikuntha Behera, an aspiring software developer with a B.Tech in Computer Science. Passionate about
-        software development, web design, and project management. Skilled in multiple programming languages and
-        frameworks,
-        eager to contribute to organizational growth.
-      </p>
+            <a href="./resume.pdf" download>
+              <button
+                class="bg-yellow-500 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                <i class="fa-solid fa-download"></i>
+                <span>Download Resume</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
 
-      <!-- Action Buttons -->
-      <div class="flex justify-center md:flex-row flex-col md:space-x-4 space-y-4 md:space-y-0">
-        <!-- Hire Me Button -->
-        <a href="#contact">
-          <button
-            class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-            <i class="fa-solid fa-phone animate-pulse"></i>
-            <span>Hire Me</span>
-          </button>
-        </a>
-
-        <!-- See My Works Button -->
-        <a href="#projects">
-          <button
-            class="bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-            <i class="fa-solid fa-laptop"></i>
-            <span>See My Works</span>
-          </button>
-        </a>
-
-        <!-- Download Resume Button -->
-        <a href="./resume.pdf" download>
-          <button
-            class="bg-yellow-500 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-            <i class="fa-solid fa-download"></i>
-            <span>Download Resume</span>
-          </button>
-        </a>
+      <!-- Terminal Section -->
+      <div id="terminal-container"
+        class="bnc bg-gray-900 rounded-md w-4/5 max-w-3xl h-72 shadow-lg fixed top-20 right-12 z-40 scrollbar-hide overflow-auto hidden"
+        style="background: rgba(15, 15, 15, 0.8); backdrop-filter: blur(10px);">
+        <div id="terminal-header" class="bg-gray-800 p-2 flex justify-between items-center cursor-move"
+          style="background: rgba(50, 50, 50, 0.7);">
+          <div class="flex gap-2">
+            <div class="button close bg-red-500 rounded-full w-3 h-3" id="terminal-close-btn"></div>
+            <div class="button minimize bg-yellow-500 rounded-full w-3 h-3"></div>
+            <div class="button maximize bg-green-500 rounded-full w-3 h-3"></div>
+          </div>
+          <span class="text-sm text-white">Terminal</span>
+        </div>
+        <div id="terminal-output"
+          class="terminal-body p-2 text-green-600 font-mono whitespace-pre-wrap flex flex-col justify-start items-start scrollbar-dark scrollbar-thumb-rounded scrollbar-thumb-gray-500 scrollbar-track-rounded scrollbar-track-gray-300">
+          <div>guest@terminal:~$ Type 'help' to see all commands</div>
+        </div>
+        <div id="terminal-input-container" class="p-2 text-green-600 font-mono flex items-center">
+          <div class="mr-2">guest@terminal:~$</div>
+          <input id="terminal-input" type="text" class="w-full bg-transparent border-none outline-none text-green-600"
+            autofocus>
+        </div>
       </div>
-    </div>
-  </section>
 
+      <section id="education" class="container mx-auto px-6 py-12 rounded-md relative bg-blend-lighten hidden lg:block">
+        <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
+        <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
 
+          <div
+            class="bnc education-item flex flex-col md:flex-row items-center mb-8 relative transition duration-300 ease-in-out transform hover:scale-105">
+            <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div class="w-full md:w-1/2 px-4 md:text-right">
+              <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-6 glassmorphism-card">
+                <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
+                <p class="text-white">RIT, Berhampur (BPUT)</p>
+                <p class="text-white">CGPA: 8.4</p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2020-2024</div>
+          </div>
 
-  <!-- terminal -->
-  <div id="terminal-container"
-    class=" bnc bg-gray-900 rounded-md w-4/5 max-w-3xl h-72 shadow-lg fixed top-20 right-12 z-40 scrollbar-hide overflow-auto hidden ">
-    <div id="terminal-header" class="bg-gray-800 p-2 flex justify-between items-center cursor-move">
-      <div class="flex gap-2">
-        <div class="button close bg-red-500 rounded-full w-3 h-3"></div>
-        <div class="button minimize bg-yellow-500 rounded-full w-3 h-3"></div>
-        <div class="button maximize bg-green-500 rounded-full w-3 h-3"></div>
-      </div>
-      <span class="text-sm text-white">Terminal</span>
-    </div>
-    <div id="terminal-output"
-      class="terminal-body p-2 text-green-600 font-mono whitespace-pre-wrap flex flex-col justify-start items-start scrollbar-dark scrollbar-thumb-rounded scrollbar-thumb-gray-500 scrollbar-track-rounded scrollbar-track-gray-300">
-      <div>guest@terminal:~$ Type 'help' to see all commands</div>
-    </div>
-    <div id="terminal-input-container" class="p-2 text-green-600 font-mono flex items-center">
-      <div class="mr-2">guest@terminal:~$</div>
-      <input id="terminal-input" type="text" class="w-full bg-transparent border-none outline-none text-green-600"
-        autofocus>
-    </div>
+          <div
+            class="education-item bnc flex flex-col md:flex-row items-center mb-8 relative transition duration-300 ease-in-out transform hover:scale-105">
+            <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+              <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-6 glassmorphism-card">
+                <h3 class="text-lg font-medium text-white">Intermediate</h3>
+                <p class="text-white">Khallikote Junior Science College, Berhampur</p>
+                <p class="text-white">Marks: 61%</p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2018-2020</div>
+          </div>
+        </div>
+      </section>
 
+      <!-- skills sections -->
+      <section id="skills" class="p-8 rounded-md  px-6 py-12 ">
+        <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
+
+        <!-- Web Development Skills -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-semibold text-white mb-4 hover:scale-105 transition-transform duration-300">Web
+            Development</h3>
+          <div class="flex items-center  p-2 rounded-md transition duration-300">
+            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">HTML5</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="html" class="bg-red-600 h-4 rounded-full " style="width: 90%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center  p-2 rounded-md transition duration-300">
+            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">CSS3</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center  p-2 rounded-md transition duration-300">
+            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">JavaScript</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center  p-2 rounded-md transition duration-300">
+            <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Bootstrap</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center p-2 rounded-md transition duration-300">
+            <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Tailwind CSS</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL/Database Skills -->
+        <div class="space-y-4 mt-6">
+          <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">MySQL</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Oracle</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python Skills -->
+        <div class="space-y-4 mt-6">
+          <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Python</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Pandas</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">TensorFlow</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">NumPy</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts"
+              class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
+            <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">OOPs, Data
+              Structures</label>
+            <div class="w-full bg-gray-700 rounded-full h-4">
+              <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
-
-
-  <!-- Education and Skills Section -->
-  <section id="education" class="container mx-auto px-6 py-12 rounded-md relative bg-blend-lighten hidden lg:block">
-    <h2 class="text-2xl font-semibold text-white mb-8">Education</h2>
-    <div class="relative">
-      <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-300 h-full"></div>
-
-      <!-- Education Item 1 -->
-      <div
-        class="bnc education-item flex flex-col md:flex-row items-center mb-8 relative transition duration-300 ease-in-out transform hover:scale-105">
-        <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        </div>
-        <div class="w-full md:w-1/2 px-4 md:text-right">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-6 glassmorphism-card">
-            <h3 class="text-lg font-medium text-white">B.Tech (Computer Science)</h3>
-            <p class="text-white">RIT, Berhampur (BPUT)</p>
-            <p class="text-white">CGPA: 8.4</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2020-2024</div>
-      </div>
-
-      <!-- Education Item 2 -->
-      <div
-        class="education-item bnc flex flex-col md:flex-row items-center mb-8 relative transition duration-300 ease-in-out transform hover:scale-105">
-        <div class="w-6 h-6 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        </div>
-        <div class="w-full md:w-1/2 px-4">
-          <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded-md p-6 glassmorphism-card">
-            <h3 class="text-lg font-medium text-white">Intermediate</h3>
-            <p class="text-white">Khallikote Junior Science College, Berhampur</p>
-            <p class="text-white">Marks: 61%</p>
-          </div>
-        </div>
-        <div class="w-full md:w-1/2 px-4 hidden md:block text-white">2018-2020</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- skill  -->
-  <section id="skills" class="p-8 rounded-md  px-6 py-12 sm:w-full md:w-3/4 lg:w-1/2 xl:w-1/3 mx-auto">
-    <h2 class="text-3xl font-semibold text-white mb-6">Technical Skills</h2>
-
-    <!-- Web Development Skills -->
-    <div class="space-y-4">
-      <h3 class="text-2xl font-semibold text-white mb-4 hover:scale-105 transition-transform duration-300">Web
-        Development</h3>
-      <div class="flex items-center  p-2 rounded-md transition duration-300">
-        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">HTML5</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="html" class="bg-red-600 h-4 rounded-full " style="width: 90%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center  p-2 rounded-md transition duration-300">
-        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">CSS3</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="css" class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center  p-2 rounded-md transition duration-300">
-        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">JavaScript</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="js" class="bg-yellow-400 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center  p-2 rounded-md transition duration-300">
-        <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Bootstrap</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="bootstrap" class="bg-purple-500 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center p-2 rounded-md transition duration-300">
-        <img src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="Tailwind CSS"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Tailwind CSS</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="tailwind" class="bg-red-400 h-4 rounded-full" style="width: 70%;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SQL/Database Skills -->
-    <div class="space-y-4 mt-6">
-      <h3 class="text-2xl font-semibold text-white mb-4">SQL/Database</h3>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">MySQL</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="mysql" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/oracle-logo.png" alt="Oracle"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Oracle</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="oracle" class="bg-red-500 h-4 rounded-full" style="width: 65%;"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Python Skills -->
-    <div class="space-y-4 mt-6">
-      <h3 class="text-2xl font-semibold text-white mb-4">Python</h3>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Python</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="python" class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">Pandas</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="pandas" class="bg-green-400 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">TensorFlow</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="tensorflow" class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">NumPy</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="numpy" class="bg-blue-500 h-4 rounded-full" style="width: 75%;"></div>
-        </div>
-      </div>
-      <div class="flex items-center">
-        <img src="https://img.icons8.com/color/48/000000/code.png" alt="Python Concepts"
-          class="w-8 h-8 mr-2 transform transition-transform duration-300 hover:scale-110">
-        <label class="text-white font-medium w-1/4 hover:text-blue-400 transition duration-300">OOPs, Data
-          Structures</label>
-        <div class="w-full bg-gray-700 rounded-full h-4">
-          <div id="oop" class="bg-red-400 h-4 rounded-full" style="width: 80%;"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- projects -->
 
@@ -334,13 +323,15 @@
           <div class="absolute top-0 right-0 lg:text-right">
             <h3 class="text-2xl font-medium mb-2">Power BI Project</h3>
             <p class="mt-2 mb-2 overflow-hidden max-h-10 hover:max-h-full transition-all duration-300 ease-in-out">
-              Created a data visualization project using Power BI to analyze and present data trends effectively. 
-              <span class="hidden hover:inline"> The project involved creating detailed dashboards, reports, and real-time analytics. This allowed for better decision-making through interactive data insights.</span>
+              Created a data visualization project using Power BI to analyze and present data trends effectively.
+              <span class="hidden hover:inline"> The project involved creating detailed dashboards, reports, and
+                real-time analytics. This allowed for better decision-making through interactive data
+                insights.</span>
             </p>
             <p><strong>Technologies:</strong> Power BI</p>
           </div>
         </div>
-        
+
         <div class="w-full lg:w-1/2 lg:pl-4">
           <iframe title="Power BI Project" width="100%" height="400"
             src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
@@ -376,32 +367,32 @@
 
       <!-- Project Card: Typing Test -->
       <div
-      class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
 
-      <div class="flex-grow text-center lg:text-right">
-        <h3 class="text-2xl font-medium mb-2">Typing Test</h3>
-        <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
-        
-        <!-- Buttons Container -->
-        <div class="flex flex-col lg:flex-row lg:justify-end items-center lg:items-start">
-          <a href="https://baikun1.github.io/typing-test/" target="_blank" class="flex items-center">
-            <button
-              class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
-              <i class="fas fa-external-link-alt mr-2"></i>
-              Open in New Tab
-            </button>
-          </a>
-          
-          <a href="https://github.com/Baikun1/typing-test" target="_blank" class="flex items-center">
-            <button
-              class="bg-blue-600 text-white font-semibold rounded shadow mx-4 my-3 py-2 px-4 w-50 hover:bg-blue-700 transition duration-300 flex items-center">
-              <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
-              Source Code
-            </button>
-          </a>
+        <div class="flex-grow text-center lg:text-right">
+          <h3 class="text-2xl font-medium mb-2">Typing Test</h3>
+          <p class="mb-2">Test your typing speed and accuracy with this interactive typing test application.</p>
+
+          <!-- Buttons Container -->
+          <div class="flex flex-col lg:flex-row lg:justify-end items-center lg:items-start">
+            <a href="https://baikun1.github.io/typing-test/" target="_blank" class="flex items-center">
+              <button
+                class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 rounded shadow hover:bg-green-700 transition duration-300 flex items-center">
+                <i class="fas fa-external-link-alt mr-2"></i>
+                Open in New Tab
+              </button>
+            </a>
+
+            <a href="https://github.com/Baikun1/typing-test" target="_blank" class="flex items-center">
+              <button
+                class="bg-blue-600 text-white font-semibold rounded shadow mx-4 my-3 py-2 px-4 w-50 hover:bg-blue-700 transition duration-300 flex items-center">
+                <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+                Source Code
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
-      
+
         <div class="w-full lg:w-1/2 lg:pl-4">
           <div class="overflow-hidden relative" style="width: 100%; height: 400px;">
             <iframe src="https://baikun1.github.io/typing-test/" class="w-full h-full border-0"
@@ -411,42 +402,44 @@
       </div>
 
 
-            <!-- Project Card: To-Do List -->
-            <div class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
-              <div class="lg:w-1/2 p-4 text-right">
-                <div class="overflow-hidden relative w-full h-96 transform scale-90 transform-origin-top-left">
-                  <iframe src="https://baikun1.github.io/to-do-list/" class="w-full h-full border-0"
-                    title="To-Do List"></iframe>
-                </div>
-              </div>
-              <div class="lg:w-1/2 p-4">
-                <h3 class="text-lg font-medium mb-2">To-Do List</h3>
-                <p class="mb-2">Manage the tasks efficiently with this interactive to-do list application.</p>
-      
-                <a href="https://baikun1.github.io/to-do-list/" target="_blank" class="text-blue-400 ">
-                  <button
-                    class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center justify-center">
-                    <i class="fas fa-external-link-alt mr-2"></i>
-                    Open in New Tab
-                  </button>
-                </a>
-                <a href="https://github.com/Baikun1/to-do-list" target="_blank" class="text-blue-400 ">
-                  <button
-                    class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center justify-center">
-                    <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
-                    Source Code
-                  </button>
-                </a>
-              </div>
-      
-            </div>
+      <!-- Project Card: To-Do List -->
+      <div
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+        <div class="lg:w-1/2 p-4 text-right">
+          <div class="overflow-hidden relative w-full h-96 transform scale-90 transform-origin-top-left">
+            <iframe src="https://baikun1.github.io/to-do-list/" class="w-full h-full border-0"
+              title="To-Do List"></iframe>
+          </div>
+        </div>
+        <div class="lg:w-1/2 p-4">
+          <h3 class="text-lg font-medium mb-2">To-Do List</h3>
+          <p class="mb-2">Manage the tasks efficiently with this interactive to-do list application.</p>
+
+          <a href="https://baikun1.github.io/to-do-list/" target="_blank" class="text-blue-400 ">
+            <button
+              class="bg-green-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-green-700 transition duration-300 flex items-center justify-center">
+              <i class="fas fa-external-link-alt mr-2"></i>
+              Open in New Tab
+            </button>
+          </a>
+          <a href="https://github.com/Baikun1/to-do-list" target="_blank" class="text-blue-400 ">
+            <button
+              class="bg-blue-600 text-white font-semibold mx-4 my-3 py-2 px-4 w-50 lg:w-50 my-3 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+              <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+              Source Code
+            </button>
+          </a>
+        </div>
+
+      </div>
       <!-- Project Card: Weather App -->
       <div
-      class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
 
         <div class="lg:w-1/2 p-4">
           <h3 class="text-lg font-medium mb-2 lg:text-right ">Weather App</h3>
-          <p class="mb-2 lg:text-right">Get real-time weather updates for any city using this simple weather application.
+          <p class="mb-2 lg:text-right">Get real-time weather updates for any city using this simple weather
+            application.
           </p>
 
           <div class="flex flex-col lg:flex-row lg:justify-end items-center lg:items-start">
@@ -457,7 +450,7 @@
                 Open in New Tab
               </button>
             </a>
-            
+
             <a href="https://github.com/Baikun1/typing-test" target="_blank" class="flex items-center">
               <button
                 class="bg-blue-600 text-white font-semibold rounded shadow mx-4 my-3 py-2 px-4 w-50 hover:bg-blue-700 transition duration-300 flex items-center">
@@ -479,11 +472,13 @@
 
 
 
-          <!-- rain prediction using ann with tenserflow -->
-      <div class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+      <!-- rain prediction using ann with tenserflow -->
+      <div
+        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
         <div class="lg:w-1/2 p-4">
           <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
-          <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity and
+          <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity
+            and
             occurrence using historical climate data.</p>
           <p><strong>Technologies:</strong> Python, TensorFlow</p>
         </div>
@@ -596,11 +591,13 @@
           Available for hire
         </strong>
         <p class="contact-text mb-4">
-          As a Python Full Stack Developer, I create dynamic web interfaces and design systems focused on accessibility,
+          As a Python Full Stack Developer, I create dynamic web interfaces and design systems focused on
+          accessibility,
           performance, and scalability. I enjoy coding from scratch, bringing ideas to life with clean, efficient
           solutions. I'm also an active open-source contributor, constantly learning new skills to stay current with
           industry trends. </p>
-        <p class="contact-text mb-4">My commitment to crafting high-quality, impactful software reflects my dedication
+        <p class="contact-text mb-4">My commitment to crafting high-quality, impactful software reflects my
+          dedication
           to continuous improvement and professional growth.</p>
         <img src="https://example.com/assets/images/signatures.png" alt="Baikuntha Behera"
           class="signatures mt-4 w-48 fade-in" loading="lazy" />
@@ -631,8 +628,6 @@
 
 
 
-
-
   <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-6 mt-12">
     <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
@@ -646,14 +641,14 @@
           <span class="ml-2 hidden sm:block">GitHub</span> <!-- Show text only on larger screens -->
         </a>
         <span class="hidden sm:inline">|</span> <!-- Separator visible only on larger screens -->
-  
+
         <!-- LinkedIn Link -->
         <a href="https://linkedin.com/in/baikuntha-behera-6b255220b/" class="text-blue-400  flex items-center">
           <i class="fab fa-linkedin fa-lg"></i>
           <span class="ml-2 hidden sm:block">LinkedIn</span> <!-- Show text only on larger screens -->
         </a>
         <span class="hidden sm:inline">|</span> <!-- Separator visible only on larger screens -->
-  
+
         <!-- Email Link -->
         <a href="mailto:bbaikuntha87@gmail.com" class="text-blue-400  flex items-center">
           <i class="fas fa-envelope fa-lg"></i>
@@ -662,7 +657,7 @@
       </div>
     </div>
   </footer>
-  
+
 
 
   <script src="./index.js"></script>
