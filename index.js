@@ -340,3 +340,24 @@ document.querySelectorAll('.tree li span').forEach(node => {
     }
   });
 });
+
+const viewResumeBtn = document.getElementById("viewResumeBtn");
+    const resumeModal = document.getElementById("resumeModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    // Show Modal
+    viewResumeBtn.addEventListener("click", () => {
+      resumeModal.classList.remove("hidden");
+    });
+
+    // Hide Modal
+    closeModalBtn.addEventListener("click", () => {
+      resumeModal.classList.add("hidden");
+    });
+
+    // Close Modal on outside click
+    window.addEventListener("click", (e) => {
+      if (e.target === resumeModal) {
+        resumeModal.classList.add("hidden");
+      }
+    });
