@@ -46,41 +46,110 @@
     </div>
   </header>
 
-  <div class="flex flex-row w-full">
-    <div class="sticky top-0 h-screen w-572 p-12">
-      <div class="relative group overflow-hidden rounded-lg shadow-lg w-full">
-        <img class="w-28 h-28 mx-auto mt-4 rounded-full border-4 border-gray-300 object-cover" src="./media/profil.jpg"
-          alt="Profile Picture of Baikuntha Behera" />
-
-        <div class="text-center mt-4">
-          <h2 class="text-lg font-semibold gradient-text">Baikuntha Behera</h2>
-          <p class="text-white text-sm">Software Developer</p>
-          <p class="text-white mt-2 px-4 text-xs">
-            Passionate software developer specializing in creating web applications and dynamic user experiences.
-            Skilled in Python, Django, and JavaScript.
-          </p>
+  <div
+    id="resumeModal"
+    class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+  >
+    <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2">
+      <!-- Modal Header -->
+      <div class="flex justify-between items-center p-4 border-b">
+        <h2 class="text-lg font-semibold text-gray-800">Resume</h2>
+        <button
+          id="closeModalBtn"
+          class="text-gray-500 hover:text-gray-700"
+        >
+          &times;
+        </button>
+      </div>
+      <!-- Modal Content -->
+      <div class="p-4">
+        <iframe
+          src="https://docs.google.com/document/d/1JC4tOP5N9JRnIn6nsNp7SHbwWrgf8kWc/edit?usp=sharing&ouid=112119505063592262759&rtpof=true&sd=true"
+          frameborder="0"
+          class="w-full h-96"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  
+  <div class="flex lg:flex-row flex-col w-full">
+    <div class="lg:sticky block top-10 h-screen flex flex-col items-center text-white p-8">
+      <!-- Profile Card -->
+      <div class="relative group overflow-hidden rounded-lg shadow-lg p-6 w-80"
+      style="background: rgba(15, 15, 15, 0.8); backdrop-filter: blur(10px);">
+        <!-- Profile Picture -->
+        <div class="flex justify-center">
+          <img
+            class="w-28 h-28 rounded-full border-4 border-gray-300 object-cover shadow-md"
+            src="./media/profil.jpg"
+            alt="Profile Picture of Baikuntha Behera"
+          />
         </div>
-
-        <div class="flex justify-center space-x-4 mt-4 mb-4">
-          <a href="https://github.com/Baikun1" target="_blank"
-            class="text-white hover:text-gray-800 transition duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.93 0-1.09.39-1.98 1.02-2.68-.1-.25-.44-1.26.1-2.63 0 0 .83-.27 2.75 1.02A9.6 9.6 0 0112 5.85c.84.01 1.68.11 2.47.32 1.91-1.29 2.75-1.02 2.75-1.02.54 1.37.2 2.38.1 2.63.63.7 1.02 1.59 1.02 2.68 0 3.83-2.33 4.68-4.56 4.93.36.31.67.92.67 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48C19.13 20.17 22 16.42 22 12c0-5.52-4.48-10-10-10z" />
-            </svg>
+    
+        <!-- Name and Title -->
+        <div class="text-center mt-4">
+          <h2 class="text-xl font-semibold">Baikuntha Behera</h2>
+          <p class="text-sm text-gray-400">Aspiring Software Developer</p>
+        </div>
+    
+        <!-- About Section -->
+        <p class="text-center text-sm text-gray-300 mt-4">
+          Passionate about web design, development, and creating solutions for real-world problems.
+        </p>
+    
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-6 mt-6">
+          <!-- GitHub -->
+          <a
+            href="https://github.com/Baikun1"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition duration-300"
+          >
+            <i class="fab fa-github text-xl"></i>
           </a>
-          <a href="https://www.linkedin.com" target="_blank"
-            class="text-white hover:text-gray-800 transition duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2">
-              <path
-                d="M16 8a6 6 0 00-12 0v8a6 6 0 0012 0V8zM3 8a9 9 0 0118 0v8a9 9 0 01-18 0V8zm9-3a3 3 0 100 6 3 3 0 000-6zM6 18h4v-4H6v4zM14 18h4v-4h-4v4z" />
-            </svg>
+    
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/baikuntha-behera"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition duration-300"
+          >
+            <i class="fab fa-linkedin text-xl"></i>
           </a>
+    
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/9591299528?text=Hello%20Baikuntha"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition duration-300"
+          >
+            <i class="fab fa-whatsapp text-xl"></i>
+          </a>
+    
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/baikunthabehera5/"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition duration-300"
+          >
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+    
+        <!-- Call to Action -->
+        <div class="text-center">
+          <div class="mt-6">
+            <button
+              id="viewResumeBtn"
+              class="block w-full text-center py-2 bg-indigo-500 rounded-md text-white font-semibold shadow-md hover:bg-indigo-600 transition duration-300"
+            >
+              View Resume
+            </button>
+          </div>
         </div>
       </div>
     </div>
+    
 
     <main class="flex-grow p-10 sm:p-16 md:p-20 lg:p-24 xl:p-28">
       <section id="container" class="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
@@ -97,24 +166,28 @@
           </h2>
 
           <p class="text-lg text-gray-300 leading-relaxed">
-            I am Baikuntha Behera, an aspiring software developer with a B.Tech in Computer Science. Passionate about
-            software development, web design, and project management. Skilled in multiple programming languages and
-            frameworks,
-            eager to contribute to organizational growth.
+Hello, I'm Baikuntha Behera, a driven and ambitious software developer with a strong foundation in Computer
+Science (B.Tech). With a passion for crafting innovative software solutions, designing intuitive web
+experiences, and managing projects efficiently, I'm excited to leverage my skills to drive organizational
+success.
+
+Proficient in a range of programming languages and frameworks, including Django, Python, JavaScript, HTML,
+CSS, and Tailwind CSS, I'm confident in my ability to adapt to new technologies and contribute to
+high-performing teams. I'm eager to collaborate, learn, and grow with like-minded professionals.
           </p>
 
           <div class="flex justify-center md:flex-row flex-col md:space-x-4 space-y-4 md:space-y-0">
-            <a href="#contact">
+            <a href="https://wa.me/9591299528?text=Hello%20Baikuntha">
               <button
-                class="bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
-                <i class="fa-solid fa-phone animate-pulse"></i>
-                <span>Hire Me</span>
+                class="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                <i class="fa-regular fa-message"></i>
+                <span>Let's Create Together</span>
               </button>
             </a>
 
             <a href="#projects">
               <button
-                class="bg-green-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                class="bg-gradient-to-r from-green-500 to-green-700 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
                 <i class="fa-solid fa-laptop"></i>
                 <span>See My Works</span>
               </button>
@@ -122,9 +195,9 @@
 
             <a href="./resume.pdf" download>
               <button
-                class="bg-yellow-500 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold py-2 px-5 rounded-lg shadow-lg hover:bg-yellow-600 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
                 <i class="fa-solid fa-download"></i>
-                <span>Download Resume</span>
+                <span>Resume</span>
               </button>
             </a>
           </div>
@@ -468,96 +541,117 @@
         </div>
       </div>
 
-
-
-
-
-      <!-- rain prediction using ann with tenserflow -->
-      <div
-        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
-        <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
-          <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity
-            and
-            occurrence using historical climate data.</p>
-          <p><strong>Technologies:</strong> Python, TensorFlow</p>
-        </div>
-        <div class="lg:w-1/2 p-4 text-right">
-        </div>
-      </div>
-
-
-      <!-- Project Card: Bank Management System -->
+      <!-- Project Card: Power BI Project -->
       <div
         class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
-        <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
-          <p class="mb-2 ">Created a bank management system using Django to handle various banking operations
-            such as
-            account management, transaction processing, and user authentication.</p>
-          <p class=""><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
-          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center ">
-            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
-              <button
-                class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
-                <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
-                Source Code
-              </button>
-            </a>
+        <div class="relative flex-grow p-4">
+          <div class="absolute top-0 right-0 lg:text-right">
+            <h3 class="text-2xl font-medium mb-2">Power BI Project</h3>
+            <p class="mt-2 mb-2 overflow-hidden max-h-10 hover:max-h-full transition-all duration-300 ease-in-out">
+              Created a data visualization project using Power BI to analyze and present data trends effectively.
+              <span class="hidden hover:inline"> The project involved creating detailed dashboards, reports, and
+                real-time analytics. This allowed for better decision-making through interactive data
+                insights.</span>
+            </p>
+            <p><strong>Technologies:</strong> Power BI</p>
           </div>
         </div>
-        <div class="lg:w-1/2 p-4 text-right"></div>
-      </div>
 
-      <!-- Project Card: QR Code Generator -->
-      <div
-        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
-        <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2 ">QR Code Generator</h3>
-          <p class="mb-2 ">Developed a web application for generating QR codes. Allows users to input data and
-            generate a
-            corresponding QR code image for various uses.</p>
-          <p class=""><strong>Technologies:</strong> Python</p>
-          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
-            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
-              <button
-                class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
-                <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
-                Source Code
-              </button>
-            </a>
-          </div>
+        <div class="w-full lg:w-1/2 lg:pl-4">
+          <iframe title="Power BI Project" width="100%" height="400"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZjY5NDlhOWQtYTE2Mi00ZTQ2LWIyODktNWZhZDEyMDcwZGZjIiwidCI6ImNjNzA1OGRhLTM3YzUtNGI4OS1iY2JkLWQ4NTkxZWY4N2MyNiJ9"
+            frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="lg:w-1/2 p-4 text-right"></div>
       </div>
 
-      <!-- Project Card: Password Generator -->
-      <div
-        class="flex flex-col lg:flex-row w-full lg:w-11/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
-        <div class="lg:w-1/2 p-4">
-          <h3 class="text-lg font-medium mb-2">Password Generator</h3>
-          <p class="mb-2 ">Developed a web application for generating passwords. Allows users to input data
-            and generate
-            a corresponding password.</p>
-          <p class=""><strong>Technologies:</strong> Python</p>
-          <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center ">
-            <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
-              <button
-                class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
-                <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
-                Source Code
-              </button>
-            </a>
-          </div>
-        </div>
-        <div class="lg:w-1/2 p-4 text-right"></div>
-      </div>
+<!-- rain prediction using ann with tenserflow -->
+<div
+  class="flex flex-col lg:flex-row w-full lg:w-10/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+  <div class="lg:w-1/2 p-4">
+    <h3 class="text-lg font-medium mb-2">Rain Prediction using ANN with TensorFlow</h3>
+    <p class="mb-2">Developed a machine learning model using ANN with TensorFlow to predict rainfall intensity
+      and
+      occurrence using historical climate data.</p>
+    <p><strong>Technologies:</strong> Python, TensorFlow</p>
+  </div>
+  <div class="lg:w-1/2 p-4 text-right">
+    <img src="./media/rainprediction.jpg" alt="Open Source" class="w-100 h-50 mx-auto" />
+  </div>
+</div>
 
+<!-- Project Card: Bank Management System -->
+<div
+  class="flex flex-col lg:flex-row w-full lg:w-10/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+  <div class="lg:w-1/2 p-4">
+    <h3 class="text-lg font-medium mb-2">Bank Management System</h3>
+    <p class="mb-2 ">Created a bank management system using Django to handle various banking operations
+      such as
+      account management, transaction processing, and user authentication.</p>
+    <p class=""><strong>Technologies:</strong> Django, HTML, CSS, JavaScript</p>
+    <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+      <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
+        <button
+          class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+          <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+          Source Code
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="lg:w-1/2 p-4 text-right">
+    <img src="./media/bankmanagement.jpg" alt="Open Source" class="w-100 h-50 mx-auto" />
+  </div>
+</div>
+
+<!-- Project Card: QR Code Generator -->
+<div
+  class="flex flex-col lg:flex-row w-full lg:w-10/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+  <div class="lg:w-1/2 p-4">
+    <h3 class="text-lg font-medium mb-2 ">QR Code Generator</h3>
+    <p class="mb-2 ">Developed a web application for generating QR codes. Allows users to input data and
+      generate a
+      corresponding QR code image for various uses.</p>
+    <p class=""><strong>Technologies:</strong> Python</p>
+    <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+      <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
+        <button
+          class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+          <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+          Source Code
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="lg:w-1/2 p-4 text-right">
+    <img src="./media/qrcodegen.jpg" alt="Open Source" class="w-100 h-50 mx-auto" />
+  </div>
+</div>
+
+<!-- Project Card: Password Generator -->
+<div
+  class="flex flex-col lg:flex-row w-full lg:w-10/12 bg-white rounded-lg overflow-hidden opacity-80 hover:opacity-100 transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-gray-50 mx-auto m-4 lg:m-8">
+  <div class="lg:w-1/2 p-4">
+    <h3 class="text-lg font-medium mb-2">Password Generator</h3>
+    <p class="mb-2 ">Developed a web application for generating passwords. Allows users to input data
+      and generate
+      a corresponding password.</p>
+    <p class=""><strong>Technologies:</strong> Python</p>
+    <div class="bg-[rgba(0,0,0,0.5)] p-4 text-center">
+      <a href="https://github.com/Baikun1/paswordgenerator" class="text-blue-400 ">
+        <button
+          class="bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-700 transition duration-300 flex items-center">
+          <i class="fa-brands fa-github fa-bounce mr-2" style="color: #ffffff;"></i>
+          Source Code
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="lg:w-1/2 p-4 text-right">
+    <img src="./media/passwoordgen.jpg" alt="Open Source" class="w-100 h-50 mx-auto" />
+  </div>
+</div>
     </div>
   </section>
-
-
-
 
   <section id="blogs" class="hidden container mx-auto px-6 py-12">
     <h2 class="text-2xl font-semibold text-white mb-4">Blog Posts</h2>
@@ -567,19 +661,13 @@
         <h1 class="text-5xl font-bold">Under Development</h1>
         <p class="text-lg">I am working on something amazing. Stay tuned!</p>
 
-
-        <!-- Animated Gears -->
-        <div class="flex justify-center space-x-4 mt-8">
-
         </div>
       </div>
     </div>
 
   </section>
 
-
-
-  <!-- contacct -->
+  <!-- contact -->
   <section class="contact bg-gray-900 text-white py-12 container mx-auto px-6 max-w-3xl">
     <!-- Set max width for larger screens -->
     <h2 class="text-3xl font-bold mb-8 text-center" id="contact">Send Message</h2>
@@ -626,8 +714,6 @@
 
   </section>
 
-
-
   <!-- Footer Section -->
   <footer class="bg-gray-900 text-white py-6 mt-12">
     <div class="container mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
@@ -657,8 +743,6 @@
       </div>
     </div>
   </footer>
-
-
 
   <script src="./index.js"></script>
   <script src="./script.js"></script>
