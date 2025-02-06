@@ -340,3 +340,21 @@ document.querySelectorAll('.tree li span').forEach(node => {
     }
   });
 });
+
+// Function to show the resume modal
+document.getElementById('viewResumeBtn').addEventListener('click', function() {
+  document.getElementById('resumeModal').classList.remove('hidden');
+});
+
+// Function to close the resume modal
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+  document.getElementById('resumeModal').classList.add('hidden');
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('resumeModal');
+  if (event.target === modal) {
+      modal.classList.add('hidden');
+  }
+});
