@@ -1,3 +1,25 @@
+
+nav ul li a {
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -115,9 +137,9 @@ img:hover {
 }
 /* style.css */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 .animate__animated {
     animation-duration: 1s;
