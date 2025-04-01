@@ -35,6 +35,7 @@ nav ul li a:hover::after {
 .bounce {
   animation: bounce 1s ease;
 }
+
 /* Custom Tailwind Classes for Animations */
 @keyframes typewriter {
   from {
@@ -51,6 +52,13 @@ nav ul li a:hover::after {
     border-color: transparent;
   }
 }
+
+
+.gradient-text {
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .animate-floating-slow {
   animation: float 4s ease-in-out infinite;
 }
@@ -59,6 +67,10 @@ nav ul li a:hover::after {
 img:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
 }
+
+
+
+
 
 /* Keyframes for slow floating effect */
 @keyframes float {
@@ -119,7 +131,6 @@ img:hover {
   }
 }
 
-
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
   display: none;
@@ -135,7 +146,25 @@ img:hover {
   background-color: #0f0f10;
   height: 85%;
 }
-/* style.css */
+#terminal-container {
+    background: rgba(15, 15, 15, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+#terminal-header {
+    background: rgba(50, 50, 50, 0.7); /* Semi-transparent header */
+}
+
+header {
+    background: rgba(50, 50, 50, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -156,4 +185,88 @@ img:hover {
 
 .animate__fadeInUp {
     animation-name: fadeInUp;
+}
+
+/* Custom CSS for tree structure */
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #4CAF50;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #4CAF50;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 2px solid #4CAF50;
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #4CAF50;
+  width: 0;
+  height: 20px;
+}
+
+.tree li span {
+  border: 2px solid #4CAF50;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.tree li span:hover, .tree li span:hover + ul li span {
+  background: #4CAF50;
+  color: #fff;
+  border: 2px solid #4CAF50;
+}
+
+.tree li span:hover + ul li::after, .tree li span:hover + ul li::before, .tree li span:hover + ul::before, .tree li span:hover + ul ul {
+  border-color: #4CAF50; /* Example style */
 }

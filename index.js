@@ -85,7 +85,6 @@ fetch('./terminal.json')
     if (!data || typeof data !== 'object') {
       throw new Error('Invalid JSON data');
     }
-
     commands = {
       'intro': data.introduction || 'No introduction available',
       'about': data.about || 'No about information available',
@@ -93,9 +92,39 @@ fetch('./terminal.json')
       'skills': data.technicalSkills || 'No technical skills available',
       'projects': data.projects || 'No projects available',
       'blog': data.blog || 'No blog available',
-      'help': ["Available commands:", "intro", "about", "edu", "skills", "projects", "blog", "help", "clear", "exit"],
-      'clear': ["Clearing the screen..."],
-      'exit': ["Exiting the command prompt..."]
+      'help': [
+      "<span class='text-blue-400'>Available commands:</span>",
+      "<span class='text-green-400'>intro</span> - introduction about me",
+      "<span class='text-green-400'>about</span> - about me",
+      "<span class='text-green-400'>edu</span> - my education",
+      "<span class='text-green-400'>skills</span> - my technical skills",
+      "<span class='text-green-400'>projects</span> - my projects",
+      "<span class='text-green-400'>blog</span> - my blog",
+      "<span class='text-green-400'>help</span> - list of commands",
+      "<span class='text-yellow-400'>clear</span> - clear the terminal",
+      "<span class='text-red-400'>exit</span> - exit the terminal",
+      "<span class='text-purple-400'>email</span> - my email address",
+      "<span class='text-purple-400'>github</span> - my GitHub profile",
+      "<span class='text-purple-400'>linkedin</span> - my LinkedIn profile",
+      "<span class='text-blue-400'>ls</span> - list directory contents",
+      "<span class='text-blue-400'>dir</span> - list directory contents",
+      "<span class='text-blue-400'>cd</span> - change directory",
+      "<span class='text-blue-400'>date</span> - display current date and time",
+      "<span class='text-blue-400'>echo</span> - display a line of text",
+      "<span class='text-blue-400'>find</span> - search for a text string in a file",
+      "<span class='text-blue-400'>goto</span> - jump to a labeled line in a batch script",
+      "<span class='text-blue-400'>tree</span> - display directory structure in a tree format"
+      ],
+      'clear': ["<span class='text-yellow-400'>Clearing the screen...</span>"],
+      'exit': ["<span class='text-red-400'>Exiting the command prompt...</span>"],
+      'ls': ["<span class='text-blue-400'>Listing directory contents...</span>"],
+      'dir': ["<span class='text-blue-400'>Listing directory contents...</span>"],
+      'cd': ["<span class='text-blue-400'>Changing directory...</span>"],
+      'date': [new Date().toString()],
+      'echo': ["<span class='text-blue-400'>Echoing text...</span>"],
+      'find': ["<span class='text-blue-400'>Finding text...</span>"],
+      'goto': ["<span class='text-blue-400'>Going to label...</span>"],
+      'tree': ["<span class='text-blue-400'>Displaying directory structure...</span>"]
     };
   })
   .catch(error => {
@@ -116,22 +145,18 @@ function handleKey(event) {
     terminalInput.value = '';
 
     if (commands[inputText]) {
-      showLoadingEffect(() => {
-        if (inputText === 'clear') {
-          clearTerminal();
-        } else if (inputText === 'exit') {
-          appendToTerminal(commands[inputText][0]);
-          setTimeout(() => {
-            terminalContainer.classList.add('hidden');
-          }, 2000);
-        } else {
-          appendWithDelay(commands[inputText], 1000);
-        }
-      });
+      if (inputText === 'clear') {
+        clearTerminal();
+      } else if (inputText === 'exit') {
+        appendToTerminal(commands[inputText][0]);
+        setTimeout(() => {
+          terminalContainer.classList.add('hidden');
+        }, 2000);
+      } else {
+        appendWithDelay(commands[inputText], 0); // Show result instantly for help command
+      }
     } else if (subCommands[inputText]) {
-      showLoadingEffect(() => {
-        appendWithDelay(subCommands[inputText], 1000);
-      });
+      appendWithDelay(subCommands[inputText], 0); // Show result instantly for subcommands
     } else {
       appendToTerminal('Command not found or error.');
     }
@@ -220,6 +245,11 @@ terminalToggleBtn.addEventListener('click', () => {
   terminalContainer.classList.toggle('hidden');
 });
 
+// Function to close terminal
+document.getElementById('terminal-close-btn').addEventListener('click', () => {
+  terminalContainer.classList.add('hidden');
+});
+
 // Show terminal after 5 seconds of page load
 setTimeout(() => {
   terminalContainer.classList.remove('hidden');
@@ -300,3 +330,31 @@ function main() {
 
 // Call the main function when the DOM is ready
 document.addEventListener('DOMContentLoaded', main);
+
+// Handle interactive tree structure
+document.querySelectorAll('.tree li span').forEach(node => {
+  node.addEventListener('click', () => {
+    const nextUl = node.nextElementSibling;
+    if (nextUl) {
+      nextUl.style.display = nextUl.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+});
+
+// Function to show the resume modal
+document.getElementById('viewResumeBtn').addEventListener('click', function() {
+  document.getElementById('resumeModal').classList.remove('hidden');
+});
+
+// Function to close the resume modal
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+  document.getElementById('resumeModal').classList.add('hidden');
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('resumeModal');
+  if (event.target === modal) {
+      modal.classList.add('hidden');
+  }
+});
