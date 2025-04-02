@@ -19,6 +19,23 @@ nav ul li a:hover::after {
   width: 100%;
   left: 0;
 }
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 100%; }
+  50% { background-position: 0% 100%; }
+  75% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+.neon-gradient {
+  background: linear-gradient(45deg, #1405e9, #eeff00, #ff0000, #d400ff, #2600ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 5s infinite ease-in-out;
+}
+
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
