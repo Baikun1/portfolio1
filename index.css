@@ -58,7 +58,7 @@ nav ul li a:hover::after {
   from {
     width: 0;
   }
-
+   
   to {
     width: 100%;
   }
