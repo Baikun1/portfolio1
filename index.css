@@ -57,7 +57,7 @@ nav ul li a:hover::after {
 @keyframes typewriter {
   from {
     width: 0;
-  }
+  }   
    
   to {
     width: 100%;
